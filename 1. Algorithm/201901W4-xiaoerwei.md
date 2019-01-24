@@ -1,4 +1,4 @@
-### Leetcode: 01.只出现一次的数字
+### Leetcode: 01.Two Sum
 
 题目难度：简单
 
