@@ -15,7 +15,7 @@ public ListNode FindKthToTail(ListNode head, int k) {
         if(fast.next != null) {
             fast = fast.next;
         }
-        else null
+        else null;
     }
     while(fast.next != null) {
         fast = fast.next;
