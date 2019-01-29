@@ -15,12 +15,14 @@
 
 Vue代码目录结构：  
 
-![](https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/dkwuWwLoRKicqyOtax0Hhl3efDCpqTAB7oHM7ftVnibAF5YfjicDiakxWYdehCVibksdzwX5wmk4u5QFYBDiarGMcGxA/640?wx_fmt=png)  
+![](https://wx4.sinaimg.cn/mw690/6dd2f9a2gy1fznk0xnz7rj20hs04gweg.jpg)  
+
 [图片来源](https://blog.csdn.net/liyanlei5858/article/details/80771713)
   
 SpringBoot代码目录结构： 
   
-![](https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/dkwuWwLoRKicqyOtax0Hhl3efDCpqTAB7VX7dtKkWdjlWptMTHTiabibdo0JQ6RacPTnicKvZ9LM4JkbAdEgwr2umA/640?wx_fmt=png)  
+![](https://wx4.sinaimg.cn/mw690/6dd2f9a2gy1fznk0xn9fsj20hs0addfv.jpg)  
+
 [图片来源](https://blog.csdn.net/liyanlei5858/article/details/80771713)
   
 这种方式**不适合工程项目**，也没有做到真正的**前后端代码分离**。我们更应该使用构建工具进行项目整合的构建，在构建springboot时触发前端构建并编写自动化脚本将前端webpack构建好的资源拷贝到springboot下再进行jar的打包，最后就得到了一个完全包含前后端的springboot项目了。  
@@ -32,8 +34,8 @@ SpringBoot代码目录结构：
 关于问题1，只需要在SpringBoot代码中修改静态资源的路径即可。  
   
 参考例子：  
-
-![](https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/dkwuWwLoRKicqyOtax0Hhl3efDCpqTAB7Cuia31NS6qiayqm7mszraDMylFBia5cWOibvMQ6qAtWw2SgNKJhf110L4w/640?wx_fmt=png, "参考例子")  
+  
+![](https://wx4.sinaimg.cn/mw690/6dd2f9a2gy1fznk0xov6bj20hs04h3z5.jpg, "参考例子")    
   
 关于问题2：需要在 Vue 中修改路由的路径，然后交由 router 来处理，修改路由路径的时候可以使用同一的前缀或者后缀，然后 SpringBoot 添加相应的拦截器进行拦截。  
   
