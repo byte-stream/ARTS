@@ -1,29 +1,22 @@
-# 常用排序算法
+# 算法练习
 
-* 简单排序
+### 输入两棵二叉树A、B,判断 B 是不是 A 的子结构。
 
-    * 冒泡排序
+> 思路：若根节点相等，利用递归比较他们的子树是否相等，若根节点不相等，则利用递归分别在左右子树中查找。
+
+```java
+public boolean HasSubtree(TreeNode root1, TreeNode root2) {
+    boolean result = false;
     
-        ```java
-        public class BubbleSort {
-        
-            private static void method(int[] arr) {
-                if(arr==null || arr.length==0) {
-                    return ;
-                }
-                for(int x = 0; x < arr.length; x++) {
-                    for(int y = 0; y < arr.length-1-x; y++) {
-                        if(arr[y]>arr[y+1]) {
-                            swap(arr, y, y+1);
-                        }
-                    }
-                }
-            }
-        
-            private static void swap(int[] arr, int m, int n) {
-                int temp = arr[m];
-                arr[m] = arr[n];
-                arr[n] = temp;
-            }
+    if(root1!=null && root2!=null) {
+        if(root1.val == root2.val) {
+            result = doesTreeHaveTree2(root1, root2);
         }
-        ```
+        if(!result) {
+            return HasSubtree(root1.left, root2) || HashSubtree(root1.right,root2);
+        }
+    }
+    
+    return result;
+}
+```
