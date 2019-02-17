@@ -2,11 +2,16 @@ import os
 import sys
 
 """
-usage:
-    shell: python script.py 201902W1
+usage(python3):
+
+python script.py 201902W3
 """
 
 folders = ['Algorithm', 'Review', 'Share', 'Tip']
+
+
+def write_by_utf8(obj, args):
+    obj.write(args.encode('utf8'))
 
 
 def main(week: str):
@@ -14,19 +19,16 @@ def main(week: str):
     if week not in os.listdir('./Weekly')[-1]:
         length += 1
     with open('./Weekly/' + week + '.md', 'wb') as md:
-        md.write('# Weekly #{}\n\n'.format(length).encode('utf8'))
-        md.write('这是ARTS计划的第*{}*周，一共有*{}*位同学完成了目标\n\n'.format(length, '(占坑)').encode('utf8'))
+        write_by_utf8(md, '# Weekly #{}\n\n'.format(length))
+        write_by_utf8(md, '这是ARTS计划的第*{}*周，一共有*{}*位同学完成了目标\n\n'.format(length, '(占坑)'))
         for folder in folders:
-            md.write('## {}\n\n'.format(folder).encode('utf8'))
+            write_by_utf8(md, '## {}\n\n'.format(folder))
             if folder == 'Algorithm':
-                md.write('[这里](../Algorithm/{})\n\n'.format(week).encode('utf8'))
+                write_by_utf8(md, '[这里](../Algorithm/{})\n\n'.format(week))
                 continue
             files = os.listdir(folder + '/' + max(os.listdir(folder)))
             for file in files:
-                if '-name' in file:
-                    continue
-                md.write('[{}](../{}/{}/{})\n\n'.format(
-                    file[:-3], folder, week, file.replace(' ', '%20')).encode('utf8'))
+                write_by_utf8(md, '[{}](../{}/{}/{})\n\n'.format(file[:-3], folder, week, file.replace(' ', '%20')))
 
 
 if __name__ == '__main__':
