@@ -7,7 +7,7 @@ usage(python3):
 python script.py 201902W3
 """
 
-folders = ['Algorithm', 'Review', 'Share', 'Tip']
+folders = ['Algorithm', 'Review', 'Tip', 'Share']
 
 
 def write_by_utf8(obj, args):
@@ -20,13 +20,13 @@ def main(week: str):
         length += 1
     with open('./Weekly/' + week + '.md', 'wb') as md:
         write_by_utf8(md, '# Weekly #{}\n\n'.format(length))
-        write_by_utf8(md, '这是ARTS计划的第*{}*周，一共有*{}*位同学完成了目标\n\n'.format(length, '(占坑)'))
+        write_by_utf8(md, '这是ARTS计划的第*{}*周，一共有*{}*位同学完成了目标\n\n'.format(length, '(自己算)'))
         for folder in folders:
             write_by_utf8(md, '## {}\n\n'.format(folder))
             if folder == 'Algorithm':
                 write_by_utf8(md, '[这里](../Algorithm/{})\n\n'.format(week))
                 continue
-            files = os.listdir(folder + '/' + max(os.listdir(folder)))
+            files = os.listdir(folder + '/' + week)
             for file in files:
                 write_by_utf8(md, '[{}](../{}/{}/{})\n\n'.format(file[:-3], folder, week, file.replace(' ', '%20')))
 
