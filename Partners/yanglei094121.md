@@ -32,6 +32,6 @@
 ### 201902W3:
 
 - [A-栈的应用：括号匹配问题](../Algorithm/201902W3/201902W3-yanglei094121.md)
-- [R-light-field-rendering](../Review/201902W3/light field rendering-yanglei094121.md)
+- [R-light-field-rendering](../Review/201902W3/light-field-rendering-yanglei094121.md)
 - [T-update光场相机模拟程序解读](../Tip/201902W3/update光场相机模拟程序解读-yanglei094121.md)
 - [S-2019考研题解读](../Share/201902W3/2019考研题解读-yanglei094121.md)
