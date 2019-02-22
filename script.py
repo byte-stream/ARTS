@@ -1,4 +1,5 @@
 import os
+import re
 import requests
 import sys
 
@@ -89,6 +90,19 @@ def main(week: str):
         write_by_utf8(md, arts_text)
 
 
+def check_filename():
+    for folder in folders:
+        dirs = os.listdir(folder + '/')
+        for d in dirs:
+            files = os.listdir(folder + '/' + d)
+            for file in files:
+                if not re.match(r'.*-(.*)\.md', file):
+                    raise Exception('文件名不规范 {}/{}/{}'.format(folder, d, file))
+    return 'success'
+
+
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         main(sys.argv[1])
+    else:
+        check_filename()
