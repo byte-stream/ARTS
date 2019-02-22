@@ -2,6 +2,13 @@ language: python
 
 python: "3.6"
 
+before_script:
+    - pip install requests
+
+branches:
+    only:
+        - master
+        - script
 script:
     python ./script.py
 
