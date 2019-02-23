@@ -1,8 +1,9 @@
 import os
-import requests
+import re
 import sys
 
 from collections import Counter
+from urllib import request
 
 """
 usage(python3):
@@ -34,15 +35,15 @@ def get_achieve_goal_authors(week: str) -> list:
     return achieve_authors
 
 
-def generate_image(size='1200x800', image_type='nature') -> str:
+def generate_image(size='1200x800', image_type='books,nature') -> str:
     """
     随机抓取一张unsplash的图片
     https://source.unsplash.com/
     """
     url = 'https://source.unsplash.com/{size}/?{type}'.format(size=size, type=image_type)
     try:
-        image_url = requests.get(url, timeout=4).url
-    except requests.exceptions.RequestException:
+        image_url = request.urlopen(url, timeout=4).url
+    except request.URLError:
         print('Fetch image timeout, Retry or add images manually!')
         image_url = ''
     return image_url
@@ -89,6 +90,19 @@ def main(week: str):
         write_by_utf8(md, arts_text)
 
 
+def check_filename():
+    for folder in folders:
+        dirs = os.listdir(folder + '/')
+        for d in dirs:
+            files = os.listdir(folder + '/' + d)
+            for file in files:
+                if not re.match(r'.*-(.*)\.md', file):
+                    raise Exception('文件名不规范 {}/{}/{}'.format(folder, d, file))
+    return 'success'
+
+
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         main(sys.argv[1])
+    else:
+        check_filename()
