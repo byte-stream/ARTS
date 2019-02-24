@@ -35,3 +35,11 @@
 - [R-light-field-rendering](../Review/201902W3/light-field-rendering-yanglei094121.md)
 - [T-update光场相机模拟程序解读](../Tip/201902W3/update光场相机模拟程序解读-yanglei094121.md)
 - [S-2019考研题解读](../Share/201902W3/2019考研题解读-yanglei094121.md)
+
+
+### 201902W4:
+
+- [A-队列基础知识](../Algorithm/201902W4/201902W4-yanglei094121.md)
+- [R-light-field-rendering](../Review/201902W4/light-field-rendering-yanglei094121.md)
+- [T-常见latex编译问题](../Tip/201902W4/atex编译相关问题-yanglei094121.md)
+- [S-markdown插入数学公式](../Share/201902W4/markdown插入数学公式-yanglei094121.md)
