@@ -9,7 +9,7 @@ from urllib import request
 usage(python3):
 
 pip install requests
-python script.py 201902W3
+python weekly.py 201902W3
 """
 
 folders = ['Algorithm', 'Review', 'Tip', 'Share']

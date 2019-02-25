@@ -1,5 +1,3 @@
 .idea/
 __pycache__/
 _book/
-node_modules/
-package-lock.json

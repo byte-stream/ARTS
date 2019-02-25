@@ -27,7 +27,7 @@ branches:         # 分支
         - script
     
 script:           # 执行语句
-    python ./script.py
+    python ./script/weekly.py
 
 notifications:    # 通知
     email: false
