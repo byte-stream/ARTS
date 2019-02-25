@@ -76,6 +76,22 @@ def generate_folders(week: str) -> str:
     return text
 
 
+def generate_weekly_collect():
+    """ 生成汇总 """
+    text = '\n\n'
+    for i, file in enumerate(sorted(os.listdir('Weekly'))):
+        text += '[第{}周](/Weekly/{})\n'.format(i+1, file)
+    text += '\n\n'
+    with open('./README.md', 'rb') as md:
+        content = md.read().decode('utf8')
+    left = content.find('## 汇总') + len('## 汇总')
+    right = content.find('## 联系')
+    content = content[:left] + text + content[right:]
+    with open('./README.md', 'wb') as md:
+        write_by_utf8(md, content)
+    return text
+
+
 def main(week: str):
     length = len(os.listdir('./Weekly/'))
     if week + '.md' not in os.listdir('./Weekly'):
@@ -83,11 +99,12 @@ def main(week: str):
     image_url = generate_image()
     partners_text = generate_partners(length, week)
     arts_text = generate_folders(week)
-    with open('./Weekly/' + week + '.md', 'ab') as md:
+    with open('./Weekly/' + week + '.md', 'wb') as md:
         write_by_utf8(md, '# Weekly #{}\n\n'.format(length))
         write_by_utf8(md, '![]({})\n\n'.format(image_url))
         write_by_utf8(md, partners_text)
         write_by_utf8(md, arts_text)
+    generate_weekly_collect()
 
 
 def check_filename():
