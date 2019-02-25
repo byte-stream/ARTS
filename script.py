@@ -99,7 +99,7 @@ def main(week: str):
     image_url = generate_image()
     partners_text = generate_partners(length, week)
     arts_text = generate_folders(week)
-    with open('./Weekly/' + week + '.md', 'ab') as md:
+    with open('./Weekly/' + week + '.md', 'wb') as md:
         write_by_utf8(md, '# Weekly #{}\n\n'.format(length))
         write_by_utf8(md, '![]({})\n\n'.format(image_url))
         write_by_utf8(md, partners_text)
