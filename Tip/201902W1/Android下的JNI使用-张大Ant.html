@@ -1,0 +1,3727 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Android下的JNI使用-张大Ant.md · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Flask的线程隔离-yu.html" />
+    
+    
+    <link rel="prev" href="../../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../Algorithm/201902W4/201902W4-YuanCome.html">
+            
+                <a href="../../Algorithm/201902W4/201902W4-YuanCome.html">
+            
+                    
+                    201902W4-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../Algorithm/201902W4/201902W4-ZmJ.html">
+            
+                <a href="../../Algorithm/201902W4/201902W4-ZmJ.html">
+            
+                    
+                    201902W4-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../Algorithm/201902W4/201902W4-yanglei094121.html">
+            
+                <a href="../../Algorithm/201902W4/201902W4-yanglei094121.html">
+            
+                    
+                    201902W4-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../Algorithm/201902W4/201902W4-启航.html">
+            
+                <a href="../../Algorithm/201902W4/201902W4-启航.html">
+            
+                    
+                    201902W4-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../Algorithm/201902W4/201902W4-寒食君.html">
+            
+                <a href="../../Algorithm/201902W4/201902W4-寒食君.html">
+            
+                    
+                    201902W4-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../../Algorithm/201902W3/201902W3-Leo.html">
+            
+                <a href="../../Algorithm/201902W3/201902W3-Leo.html">
+            
+                    
+                    201902W3-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../../Algorithm/201902W3/201902W3-YuanCome.html">
+            
+                <a href="../../Algorithm/201902W3/201902W3-YuanCome.html">
+            
+                    
+                    201902W3-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="../../Algorithm/201902W3/201902W3-ZmJ.html">
+            
+                <a href="../../Algorithm/201902W3/201902W3-ZmJ.html">
+            
+                    
+                    201902W3-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="../../Algorithm/201902W3/201902W3-starichat.html">
+            
+                <a href="../../Algorithm/201902W3/201902W3-starichat.html">
+            
+                    
+                    201902W3-starichat.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" data-path="../../Algorithm/201902W3/201902W3-yanglei094121.html">
+            
+                <a href="../../Algorithm/201902W3/201902W3-yanglei094121.html">
+            
+                    
+                    201902W3-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.6" data-path="../../Algorithm/201902W3/201902W3-启航.html">
+            
+                <a href="../../Algorithm/201902W3/201902W3-启航.html">
+            
+                    
+                    201902W3-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.7" data-path="../../Algorithm/201902W3/201902W3-陈小渣.html">
+            
+                <a href="../../Algorithm/201902W3/201902W3-陈小渣.html">
+            
+                    
+                    201902W3-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="../../Algorithm/201902W2/201902W2-Leo.html">
+            
+                <a href="../../Algorithm/201902W2/201902W2-Leo.html">
+            
+                    
+                    201902W2-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.2" data-path="../../Algorithm/201902W2/201902W2-ZmJ.html">
+            
+                <a href="../../Algorithm/201902W2/201902W2-ZmJ.html">
+            
+                    
+                    201902W2-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.3" data-path="../../Algorithm/201902W2/201902W2-yanglei094121.html">
+            
+                <a href="../../Algorithm/201902W2/201902W2-yanglei094121.html">
+            
+                    
+                    201902W2-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.4.1" data-path="../../Algorithm/201902W1/201902W1-EruDev.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-EruDev.html">
+            
+                    
+                    201902W1-EruDev.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.2" data-path="../../Algorithm/201902W1/201902W1-Leo.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-Leo.html">
+            
+                    
+                    201902W1-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.3" data-path="../../Algorithm/201902W1/201902W1-YuanCome.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-YuanCome.html">
+            
+                    
+                    201902W1-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.4" data-path="../../Algorithm/201902W1/201902W1-ZmJ.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-ZmJ.html">
+            
+                    
+                    201902W1-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.5" data-path="../../Algorithm/201902W1/201902W1-torreyxian.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-torreyxian.html">
+            
+                    
+                    201902W1-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.6" data-path="../../Algorithm/201902W1/201902W1-yanglei094121.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-yanglei094121.html">
+            
+                    
+                    201902W1-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.7" data-path="../../Algorithm/201902W1/201902W1-yu.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-yu.html">
+            
+                    
+                    201902W1-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.8" data-path="../../Algorithm/201902W1/201902W1-启航.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-启航.html">
+            
+                    
+                    201902W1-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.9" data-path="../../Algorithm/201902W1/201902W1-寒食君.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-寒食君.html">
+            
+                    
+                    201902W1-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.10" data-path="../../Algorithm/201902W1/201902W1-张大Ant.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-张大Ant.html">
+            
+                    
+                    201902W1-张大Ant.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.11" data-path="../../Algorithm/201902W1/201902W1-陈小渣.html">
+            
+                <a href="../../Algorithm/201902W1/201902W1-陈小渣.html">
+            
+                    
+                    201902W1-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201901W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.5.1" data-path="../../Algorithm/201901W4/201901W4-EruDev.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-EruDev.html">
+            
+                    
+                    201901W4-EruDev.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.2" data-path="../../Algorithm/201901W4/201901W4-Iris.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-Iris.html">
+            
+                    
+                    201901W4-Iris.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.3" data-path="../../Algorithm/201901W4/201901W4-Leo.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-Leo.html">
+            
+                    
+                    201901W4-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.4" data-path="../../Algorithm/201901W4/201901W4-RenshuozZ.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-RenshuozZ.html">
+            
+                    
+                    201901W4-RenshuozZ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.5" data-path="../../Algorithm/201901W4/201901W4-YuanCome.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-YuanCome.html">
+            
+                    
+                    201901W4-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.6" data-path="../../Algorithm/201901W4/201901W4-ZmJ.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-ZmJ.html">
+            
+                    
+                    201901W4-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.7" data-path="../../Algorithm/201901W4/201901W4-joy.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-joy.html">
+            
+                    
+                    201901W4-joy.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.8" data-path="../../Algorithm/201901W4/201901W4-puck.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-puck.html">
+            
+                    
+                    201901W4-puck.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.9" data-path="../../Algorithm/201901W4/201901W4-tangyi.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-tangyi.html">
+            
+                    
+                    201901W4-tangyi.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.10" data-path="../../Algorithm/201901W4/201901W4-torreyxian.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-torreyxian.html">
+            
+                    
+                    201901W4-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.11" data-path="../../Algorithm/201901W4/201901W4-tvp100.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-tvp100.html">
+            
+                    
+                    201901W4-tvp100.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.12" data-path="../../Algorithm/201901W4/201901W4-xiaoerwei.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-xiaoerwei.html">
+            
+                    
+                    201901W4-xiaoerwei.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.13" data-path="../../Algorithm/201901W4/201901W4-yanglei094121.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-yanglei094121.html">
+            
+                    
+                    201901W4-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.14" data-path="../../Algorithm/201901W4/201901W4-yu.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-yu.html">
+            
+                    
+                    201901W4-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.15" data-path="../../Algorithm/201901W4/201901W4-启航.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-启航.html">
+            
+                    
+                    201901W4-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.16" data-path="../../Algorithm/201901W4/201901W4-寒食君.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-寒食君.html">
+            
+                    
+                    201901W4-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.17" data-path="../../Algorithm/201901W4/201901W4-波胖子.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-波胖子.html">
+            
+                    
+                    201901W4-波胖子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.18" data-path="../../Algorithm/201901W4/201901W4-落英坠露.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-落英坠露.html">
+            
+                    
+                    201901W4-落英坠露.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.19" data-path="../../Algorithm/201901W4/201901W4-陈小渣.html">
+            
+                <a href="../../Algorithm/201901W4/201901W4-陈小渣.html">
+            
+                    
+                    201901W4-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5.20" data-path="../../Algorithm/201901W4/201901w4-Lin_嘉杰.html">
+            
+                <a href="../../Algorithm/201901W4/201901w4-Lin_嘉杰.html">
+            
+                    
+                    201901w4-Lin_嘉杰.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Review
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../Review/201902W4/2019年浏览器的现状-寒食君.html">
+            
+                <a href="../../Review/201902W4/2019年浏览器的现状-寒食君.html">
+            
+                    
+                    2019年浏览器的现状-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../Review/201902W4/Docker教程三-YuanCome.html">
+            
+                <a href="../../Review/201902W4/Docker教程三-YuanCome.html">
+            
+                    
+                    Docker教程三-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../Review/201902W4/Java-for-Python-Programmers-ZmJ.html">
+            
+                <a href="../../Review/201902W4/Java-for-Python-Programmers-ZmJ.html">
+            
+                    
+                    Java-for-Python-Programmers-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../Review/201902W4/light-field-rendering-yanglei094121.html">
+            
+                <a href="../../Review/201902W4/light-field-rendering-yanglei094121.html">
+            
+                    
+                    light-field-rendering-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../Review/201902W4/写出好代码的12步-落英坠露.html">
+            
+                <a href="../../Review/201902W4/写出好代码的12步-落英坠露.html">
+            
+                    
+                    写出好代码的12步-落英坠露.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../../Review/201902W3/Docker教程二-YuanCome.html">
+            
+                <a href="../../Review/201902W3/Docker教程二-YuanCome.html">
+            
+                    
+                    Docker教程二-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="../../Review/201902W3/light-field-rendering-yanglei094121.html">
+            
+                <a href="../../Review/201902W3/light-field-rendering-yanglei094121.html">
+            
+                    
+                    light-field-rendering-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../../Review/201902W3/什么是数字签名-Leo.html">
+            
+                <a href="../../Review/201902W3/什么是数字签名-Leo.html">
+            
+                    
+                    什么是数字签名-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="../../Review/201902W3/教育部禁止教师用QQ或微信布置作业-陈小渣.html">
+            
+                <a href="../../Review/201902W3/教育部禁止教师用QQ或微信布置作业-陈小渣.html">
+            
+                    
+                    教育部禁止教师用QQ或微信布置作业-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="../../Review/201902W3/计算的未来是模拟-starichat.html">
+            
+                <a href="../../Review/201902W3/计算的未来是模拟-starichat.html">
+            
+                    
+                    计算的未来是模拟-starichat.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.6" data-path="../../Review/201902W3/软件工程与编程的不同-ZmJ.html">
+            
+                <a href="../../Review/201902W3/软件工程与编程的不同-ZmJ.html">
+            
+                    
+                    软件工程与编程的不同-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../../Review/201902W2/LFToolbox官方文档-yanglei094121.html">
+            
+                <a href="../../Review/201902W2/LFToolbox官方文档-yanglei094121.html">
+            
+                    
+                    LFToolbox官方文档-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../../Review/201902W2/RabbitMQ5-Topic-Leo.html">
+            
+                <a href="../../Review/201902W2/RabbitMQ5-Topic-Leo.html">
+            
+                    
+                    RabbitMQ5-Topic-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../../Review/201902W1/Docker教程I-YuanCome.html">
+            
+                <a href="../../Review/201902W1/Docker教程I-YuanCome.html">
+            
+                    
+                    Docker教程I-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../../Review/201902W1/LFToolbox-yanglei094121.html">
+            
+                <a href="../../Review/201902W1/LFToolbox-yanglei094121.html">
+            
+                    
+                    LFToolbox-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="../../Review/201902W1/RabbitMQ2-WorkQueues-Leo.html">
+            
+                <a href="../../Review/201902W1/RabbitMQ2-WorkQueues-Leo.html">
+            
+                    
+                    RabbitMQ2-WorkQueues-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.4" data-path="../../Review/201902W1/Zara换了个logo-torreyxian.html">
+            
+                <a href="../../Review/201902W1/Zara换了个logo-torreyxian.html">
+            
+                    
+                    Zara换了个logo-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.5" data-path="../../Review/201902W1/不要现场编程-yu.html">
+            
+                <a href="../../Review/201902W1/不要现场编程-yu.html">
+            
+                    
+                    不要现场编程-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.6" data-path="../../Review/201902W1/具有公钥签名的JsonWebToke-EruDevn.html">
+            
+                <a href="../../Review/201902W1/具有公钥签名的JsonWebToke-EruDevn.html">
+            
+                    
+                    具有公钥签名的JsonWebToke-EruDevn.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.7" data-path="../../Review/201902W1/写给程序员读的童话书-寒食君.html">
+            
+                <a href="../../Review/201902W1/写给程序员读的童话书-寒食君.html">
+            
+                    
+                    写给程序员读的童话书-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201901W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../../Review/201901W4/HelloWorld的来历-ZmJ.html">
+            
+                <a href="../../Review/201901W4/HelloWorld的来历-ZmJ.html">
+            
+                    
+                    HelloWorld的来历-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.2" data-path="../../Review/201901W4/Light-Field-Rendering主要内容解析-yanglei094121.html">
+            
+                <a href="../../Review/201901W4/Light-Field-Rendering主要内容解析-yanglei094121.html">
+            
+                    
+                    Light-Field-Rendering主要内容解析-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.3" data-path="../../Review/201901W4/RabbitMQ1-Leo.html">
+            
+                <a href="../../Review/201901W4/RabbitMQ1-Leo.html">
+            
+                    
+                    RabbitMQ1-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.4" data-path="../../Review/201901W4/一名软件工程师的机器学习初体验-寒食君.html">
+            
+                <a href="../../Review/201901W4/一名软件工程师的机器学习初体验-寒食君.html">
+            
+                    
+                    一名软件工程师的机器学习初体验-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.5" data-path="../../Review/201901W4/个性化推荐系统的概述与样例实现-huzujun.html">
+            
+                <a href="../../Review/201901W4/个性化推荐系统的概述与样例实现-huzujun.html">
+            
+                    
+                    个性化推荐系统的概述与样例实现-huzujun.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.6" data-path="../../Review/201901W4/中国出台措施保护并修复长江生态-puck.html">
+            
+                <a href="../../Review/201901W4/中国出台措施保护并修复长江生态-puck.html">
+            
+                    
+                    中国出台措施保护并修复长江生态-puck.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.7" data-path="../../Review/201901W4/中国餐饮业的发展趋势-启航.html">
+            
+                <a href="../../Review/201901W4/中国餐饮业的发展趋势-启航.html">
+            
+                    
+                    中国餐饮业的发展趋势-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.8" data-path="../../Review/201901W4/在%20PyCharm%20中设置%20Flask%20程序-EruDev.md">
+            
+                <span>
+            
+                    
+                    在 PyCharm 中设置 Flask 程序-EruDev.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.9" data-path="../../Review/201901W4/外卖员工资超过一些白领-陈小渣.html">
+            
+                <a href="../../Review/201901W4/外卖员工资超过一些白领-陈小渣.html">
+            
+                    
+                    外卖员工资超过一些白领-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.10" data-path="../../Review/201901W4/如何成为一名杰出的开发者-YuanCome.html">
+            
+                <a href="../../Review/201901W4/如何成为一名杰出的开发者-YuanCome.html">
+            
+                    
+                    如何成为一名杰出的开发者-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.11" data-path="../../Review/201901W4/科技改变生活-波胖子.html">
+            
+                <a href="../../Review/201901W4/科技改变生活-波胖子.html">
+            
+                    
+                    科技改变生活-波胖子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.12" data-path="../../Review/201901W4/财富不均衡-torreyxian.html">
+            
+                <a href="../../Review/201901W4/财富不均衡-torreyxian.html">
+            
+                    
+                    财富不均衡-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.13" data-path="../../Review/201901W4/需求的选择性-yu.html">
+            
+                <a href="../../Review/201901W4/需求的选择性-yu.html">
+            
+                    
+                    需求的选择性-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.14" data-path="../../Review/201901W4/鬼步舞-Iris.html">
+            
+                <a href="../../Review/201901W4/鬼步舞-Iris.html">
+            
+                    
+                    鬼步舞-Iris.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Tip
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../201902W4/Android%20音视频开发1：通过三种方式绘制图片-张大Ant.md">
+            
+                <span>
+            
+                    
+                    Android 音视频开发1：通过三种方式绘制图片-张大Ant.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../201902W4/Android图像绘制与渲染-落英坠露.html">
+            
+                <a href="../201902W4/Android图像绘制与渲染-落英坠露.html">
+            
+                    
+                    Android图像绘制与渲染-落英坠露.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../201902W4/Idea远程调试服务器代码-leozhiyu.html">
+            
+                <a href="../201902W4/Idea远程调试服务器代码-leozhiyu.html">
+            
+                    
+                    Idea远程调试服务器代码-leozhiyu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../201902W4/Redis为什么不推荐使用keys命令-寒食君.html">
+            
+                <a href="../201902W4/Redis为什么不推荐使用keys命令-寒食君.html">
+            
+                    
+                    Redis为什么不推荐使用keys命令-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../201902W4/latex编译相关问题-yanglei094121.html">
+            
+                <a href="../201902W4/latex编译相关问题-yanglei094121.html">
+            
+                    
+                    latex编译相关问题-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.6" data-path="../201902W4/travis.ci持续集成工具-ZmJ.html">
+            
+                <a href="../201902W4/travis.ci持续集成工具-ZmJ.html">
+            
+                    
+                    travis.ci持续集成工具-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.7" data-path="../201902W4/带BOM的UTF-8格式和普通UTF-8格式的区别-YuanCome.html">
+            
+                <a href="../201902W4/带BOM的UTF-8格式和普通UTF-8格式的区别-YuanCome.html">
+            
+                    
+                    带BOM的UTF-8格式和普通UTF-8格式的区别-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../201902W3/ARTS周报脚本-ZmJ.html">
+            
+                <a href="../201902W3/ARTS周报脚本-ZmJ.html">
+            
+                    
+                    ARTS周报脚本-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../201902W3/AWS%20资源成本管理-Leo.md">
+            
+                <span>
+            
+                    
+                    AWS 资源成本管理-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="../201902W3/update光场相机模拟程序解读-yanglei094121.html">
+            
+                <a href="../201902W3/update光场相机模拟程序解读-yanglei094121.html">
+            
+                    
+                    update光场相机模拟程序解读-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.4" data-path="../201902W3/vim%20的使用技巧-starichat.md">
+            
+                <span>
+            
+                    
+                    vim 的使用技巧-starichat.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.5" data-path="../201902W3/宏观CSS-陈小渣.html">
+            
+                <a href="../201902W3/宏观CSS-陈小渣.html">
+            
+                    
+                    宏观CSS-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../201902W2/RabbitMQ6-RPC-Leo.html">
+            
+                <a href="../201902W2/RabbitMQ6-RPC-Leo.html">
+            
+                    
+                    RabbitMQ6-RPC-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../201902W2/光场相机模拟程序解读-yanglei094121.html">
+            
+                <a href="../201902W2/光场相机模拟程序解读-yanglei094121.html">
+            
+                    
+                    光场相机模拟程序解读-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1.4.1" data-path="Android下的JNI使用-张大Ant.html">
+            
+                <a href="Android下的JNI使用-张大Ant.html">
+            
+                    
+                    Android下的JNI使用-张大Ant.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.2" data-path="Flask的线程隔离-yu.html">
+            
+                <a href="Flask的线程隔离-yu.html">
+            
+                    
+                    Flask的线程隔离-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.3" data-path="GitHub团队协作git流程-yanglei094121.html">
+            
+                <a href="GitHub团队协作git流程-yanglei094121.html">
+            
+                    
+                    GitHub团队协作git流程-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.4" data-path="Guava为什么被取代-寒食君.html">
+            
+                <a href="Guava为什么被取代-寒食君.html">
+            
+                    
+                    Guava为什么被取代-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.5" data-path="RabbitMQ4-Routing-Leo.html">
+            
+                <a href="RabbitMQ4-Routing-Leo.html">
+            
+                    
+                    RabbitMQ4-Routing-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.6" data-path="Solr的那些事-torreyxian.html">
+            
+                <a href="Solr的那些事-torreyxian.html">
+            
+                    
+                    Solr的那些事-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.7" data-path="Windows工具软件-落英坠露.html">
+            
+                <a href="Windows工具软件-落英坠露.html">
+            
+                    
+                    Windows工具软件-落英坠露.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.8" data-path="Windows索引工具Wox-YuanCome.html">
+            
+                <a href="Windows索引工具Wox-YuanCome.html">
+            
+                    
+                    Windows索引工具Wox-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.9" data-path="集合遍历方式的选择-启航.html">
+            
+                <a href="集合遍历方式的选择-启航.html">
+            
+                    
+                    集合遍历方式的选择-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201901W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.5.1" data-path="../201901W4/CSS文章排版小技巧-yu.html">
+            
+                <a href="../201901W4/CSS文章排版小技巧-yu.html">
+            
+                    
+                    CSS文章排版小技巧-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.2" data-path="../201901W4/Git-Hook自定义工作流-ZmJ.html">
+            
+                <a href="../201901W4/Git-Hook自定义工作流-ZmJ.html">
+            
+                    
+                    Git-Hook自定义工作流-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.3" data-path="../201901W4/ImagePy简单介绍-yanglei094121.html">
+            
+                <a href="../201901W4/ImagePy简单介绍-yanglei094121.html">
+            
+                    
+                    ImagePy简单介绍-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.4" data-path="../201901W4/Premiere中常用快捷键-波胖子.html">
+            
+                <a href="../201901W4/Premiere中常用快捷键-波胖子.html">
+            
+                    
+                    Premiere中常用快捷键-波胖子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.5" data-path="../201901W4/SpringCloud底层原理-Iris.html">
+            
+                <a href="../201901W4/SpringCloud底层原理-Iris.html">
+            
+                    
+                    SpringCloud底层原理-Iris.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.6" data-path="../201901W4/markdown-torreyxian.html">
+            
+                <a href="../201901W4/markdown-torreyxian.html">
+            
+                    
+                    markdown-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.7" data-path="../201901W4/windows下安装linux虚拟机-启航.html">
+            
+                <a href="../201901W4/windows下安装linux虚拟机-启航.html">
+            
+                    
+                    windows下安装linux虚拟机-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.8" data-path="../201901W4/为什么使用JSON作为函数参数-陈小渣.html">
+            
+                <a href="../201901W4/为什么使用JSON作为函数参数-陈小渣.html">
+            
+                    
+                    为什么使用JSON作为函数参数-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.9" data-path="../201901W4/公众号爬虫的有效姿势-huzujun.html">
+            
+                <a href="../201901W4/公众号爬虫的有效姿势-huzujun.html">
+            
+                    
+                    公众号爬虫的有效姿势-huzujun.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.10" data-path="../201901W4/分享两个自己常用的工具(Everything、百度网盘客户端">
+            
+                <span>
+            
+                    
+                    分享两个自己常用的工具(Everything、百度网盘客户端)-zhaopengfei.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.11" data-path="../201901W4/如何用简单的方式生成带标签的pdf-Leo.html">
+            
+                <a href="../201901W4/如何用简单的方式生成带标签的pdf-Leo.html">
+            
+                    
+                    如何用简单的方式生成带标签的pdf-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.12" data-path="../201901W4/模版元编程（00）-puck.html">
+            
+                <a href="../201901W4/模版元编程（00）-puck.html">
+            
+                    
+                    模版元编程（00）-puck.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.13" data-path="../201901W4/第一次尝试写Markdown文章-YuanCome.html">
+            
+                <a href="../201901W4/第一次尝试写Markdown文章-YuanCome.html">
+            
+                    
+                    第一次尝试写Markdown文章-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.14" data-path="../201901W4/谈一谈ThreadLocal-寒食君.html">
+            
+                <a href="../201901W4/谈一谈ThreadLocal-寒食君.html">
+            
+                    
+                    谈一谈ThreadLocal-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Share
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1.1" data-path="../../Share/201902W4/markdown插入数学公式-yanglei094121.html">
+            
+                <a href="../../Share/201902W4/markdown插入数学公式-yanglei094121.html">
+            
+                    
+                    markdown插入数学公式-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.2" data-path="../../Share/201902W4/vim的一些插件和配置-ZmJ.html">
+            
+                <a href="../../Share/201902W4/vim的一些插件和配置-ZmJ.html">
+            
+                    
+                    vim的一些插件和配置-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.3" data-path="../../Share/201902W4/不要急，慢慢来-YuanCome.html">
+            
+                <a href="../../Share/201902W4/不要急，慢慢来-YuanCome.html">
+            
+                    
+                    不要急，慢慢来-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.4" data-path="../../Share/201902W4/关于H5活动的想法-寒食君.html">
+            
+                <a href="../../Share/201902W4/关于H5活动的想法-寒食君.html">
+            
+                    
+                    关于H5活动的想法-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.5" data-path="../../Share/201902W4/前端前端传数据时小问题-启航.html">
+            
+                <a href="../../Share/201902W4/前端前端传数据时小问题-启航.html">
+            
+                    
+                    前端前端传数据时小问题-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.6" data-path="../../Share/201902W4/毛泽东：有理，有利，有节-张大Ant.html">
+            
+                <a href="../../Share/201902W4/毛泽东：有理，有利，有节-张大Ant.html">
+            
+                    
+                    毛泽东：有理，有利，有节-张大Ant.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.2.1" data-path="../../Share/201902W3/2019考研题解读-yanglei094121.html">
+            
+                <a href="../../Share/201902W3/2019考研题解读-yanglei094121.html">
+            
+                    
+                    2019考研题解读-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.2" data-path="../../Share/201902W3/Go语言中管道堵塞+互斥死锁分析-Zoctopus.html">
+            
+                <a href="../../Share/201902W3/Go语言中管道堵塞+互斥死锁分析-Zoctopus.html">
+            
+                    
+                    Go语言中管道堵塞+互斥死锁分析-Zoctopus.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.3" data-path="../../Share/201902W3/Ljava.lang.String异常-启航.html">
+            
+                <a href="../../Share/201902W3/Ljava.lang.String异常-启航.html">
+            
+                    
+                    Ljava.lang.String异常-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.4" data-path="../../Share/201902W3/dlv调试小结-Zoctopus.html">
+            
+                <a href="../../Share/201902W3/dlv调试小结-Zoctopus.html">
+            
+                    
+                    dlv调试小结-Zoctopus.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.5" data-path="../../Share/201902W3/《富爸爸穷爸爸》部分引言-Leo.html">
+            
+                <a href="../../Share/201902W3/《富爸爸穷爸爸》部分引言-Leo.html">
+            
+                    
+                    《富爸爸穷爸爸》部分引言-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.6" data-path="../../Share/201902W3/修改git%20commit%20message-ZmJ.md">
+            
+                <span>
+            
+                    
+                    修改git commit message-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.7" data-path="../../Share/201902W3/哈希算法的应用-starichat.html">
+            
+                <a href="../../Share/201902W3/哈希算法的应用-starichat.html">
+            
+                    
+                    哈希算法的应用-starichat.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.8" data-path="../../Share/201902W3/工作日，我想分享的三个生活习惯-陈小渣.html">
+            
+                <a href="../../Share/201902W3/工作日，我想分享的三个生活习惯-陈小渣.html">
+            
+                    
+                    工作日，我想分享的三个生活习惯-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.3.1" data-path="../../Share/201902W2/Hibernate操作Oracle时主键序列化问题-启航.html">
+            
+                <a href="../../Share/201902W2/Hibernate操作Oracle时主键序列化问题-启航.html">
+            
+                    
+                    Hibernate操作Oracle时主键序列化问题-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.2" data-path="../../Share/201902W2/假期小感想-Leo.html">
+            
+                <a href="../../Share/201902W2/假期小感想-Leo.html">
+            
+                    
+                    假期小感想-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.3" data-path="../../Share/201902W2/粤语歌钟无艳学习-yanglei094121.html">
+            
+                <a href="../../Share/201902W2/粤语歌钟无艳学习-yanglei094121.html">
+            
+                    
+                    粤语歌钟无艳学习-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201902W1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../../Share/201902W1/RabbitMQ3-PublishSubscribe-Leo.html">
+            
+                <a href="../../Share/201902W1/RabbitMQ3-PublishSubscribe-Leo.html">
+            
+                    
+                    RabbitMQ3-PublishSubscribe-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../../Share/201902W1/SpringBoot全局统一异常处理-YuanCome.html">
+            
+                <a href="../../Share/201902W1/SpringBoot全局统一异常处理-YuanCome.html">
+            
+                    
+                    SpringBoot全局统一异常处理-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../../Share/201902W1/《操作系统之哲学原理》--系统调用-启航.html">
+            
+                <a href="../../Share/201902W1/《操作系统之哲学原理》--系统调用-启航.html">
+            
+                    
+                    《操作系统之哲学原理》--系统调用-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.4" data-path="../../Share/201902W1/《深入理解计算机系统》之存储器层次结构-落英坠露.html">
+            
+                <a href="../../Share/201902W1/《深入理解计算机系统》之存储器层次结构-落英坠露.html">
+            
+                    
+                    《深入理解计算机系统》之存储器层次结构-落英坠露.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.5" data-path="../../Share/201902W1/何为贵人，以及圈子的重要性-张大Ant.html">
+            
+                <a href="../../Share/201902W1/何为贵人，以及圈子的重要性-张大Ant.html">
+            
+                    
+                    何为贵人，以及圈子的重要性-张大Ant.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.6" data-path="../../Share/201902W1/你看到的AI与智能无关-寒食君.html">
+            
+                <a href="../../Share/201902W1/你看到的AI与智能无关-寒食君.html">
+            
+                    
+                    你看到的AI与智能无关-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.7" data-path="../../Share/201902W1/使用matlab将灰度图转换为彩色图-yanglei094121.html">
+            
+                <a href="../../Share/201902W1/使用matlab将灰度图转换为彩色图-yanglei094121.html">
+            
+                    
+                    使用matlab将灰度图转换为彩色图-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.8" data-path="../../Share/201902W1/思考与反思-torreyxian.html">
+            
+                <a href="../../Share/201902W1/思考与反思-torreyxian.html">
+            
+                    
+                    思考与反思-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.9" data-path="../../Share/201902W1/每天练习写作-yu.html">
+            
+                <a href="../../Share/201902W1/每天练习写作-yu.html">
+            
+                    
+                    每天练习写作-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.10" data-path="../../Share/201902W1/浅谈Git之拉取与合并-ZmJ.html">
+            
+                <a href="../../Share/201902W1/浅谈Git之拉取与合并-ZmJ.html">
+            
+                    
+                    浅谈Git之拉取与合并-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    201901W4
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.5.1" data-path="../../Share/201901W4/Django查询优化之select_related、prefetch_related-ZmJ.html">
+            
+                <a href="../../Share/201901W4/Django查询优化之select_related、prefetch_related-ZmJ.html">
+            
+                    
+                    Django查询优化之select_related、prefetch_related-ZmJ.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.2" data-path="../../Share/201901W4/SpringBoot和Vue前后端分离开发与合并%20-YuanCome.md">
+            
+                <span>
+            
+                    
+                    SpringBoot和Vue前后端分离开发与合并 -YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.3" data-path="../../Share/201901W4/SpringBoot和Vue前后端分离开发与合并-YuanCome.html">
+            
+                <a href="../../Share/201901W4/SpringBoot和Vue前后端分离开发与合并-YuanCome.html">
+            
+                    
+                    SpringBoot和Vue前后端分离开发与合并-YuanCome.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.4" data-path="../../Share/201901W4/《FlaskWeb开发实战》之Flask的工作流程与机制-EruDev.html">
+            
+                <a href="../../Share/201901W4/《FlaskWeb开发实战》之Flask的工作流程与机制-EruDev.html">
+            
+                    
+                    《FlaskWeb开发实战》之Flask的工作流程与机制-EruDev.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.5" data-path="../../Share/201901W4/《什么是真正的程序员》有感-yu.html">
+            
+                <a href="../../Share/201901W4/《什么是真正的程序员》有感-yu.html">
+            
+                    
+                    《什么是真正的程序员》有感-yu.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.6" data-path="../../Share/201901W4/《深入浅出设计模式》-启航.html">
+            
+                <a href="../../Share/201901W4/《深入浅出设计模式》-启航.html">
+            
+                    
+                    《深入浅出设计模式》-启航.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.7" data-path="../../Share/201901W4/《深入理解计算机系统》之操作系统管理硬件-落英坠露.html">
+            
+                <a href="../../Share/201901W4/《深入理解计算机系统》之操作系统管理硬件-落英坠露.html">
+            
+                    
+                    《深入理解计算机系统》之操作系统管理硬件-落英坠露.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.8" data-path="../../Share/201901W4/与百度有关的随想-陈小渣.html">
+            
+                <a href="../../Share/201901W4/与百度有关的随想-陈小渣.html">
+            
+                    
+                    与百度有关的随想-陈小渣.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.9" data-path="../../Share/201901W4/什么叫“先把书读厚，再把书读薄”笔记-波胖子.html">
+            
+                <a href="../../Share/201901W4/什么叫“先把书读厚，再把书读薄”笔记-波胖子.html">
+            
+                    
+                    什么叫“先把书读厚，再把书读薄”笔记-波胖子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.10" data-path="../../Share/201901W4/从实习中领悟的软技能-Leo.html">
+            
+                <a href="../../Share/201901W4/从实习中领悟的软技能-Leo.html">
+            
+                    
+                    从实习中领悟的软技能-Leo.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.11" data-path="../../Share/201901W4/光场计算成像空域-yanglei094121.html">
+            
+                <a href="../../Share/201901W4/光场计算成像空域-yanglei094121.html">
+            
+                    
+                    光场计算成像空域-yanglei094121.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.12" data-path="../../Share/201901W4/公众号文章有感-torreyxian.html">
+            
+                <a href="../../Share/201901W4/公众号文章有感-torreyxian.html">
+            
+                    
+                    公众号文章有感-torreyxian.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.13" data-path="../../Share/201901W4/既生Java，何生Groovy？-寒食君.html">
+            
+                <a href="../../Share/201901W4/既生Java，何生Groovy？-寒食君.html">
+            
+                    
+                    既生Java，何生Groovy？-寒食君.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.14" data-path="../../Share/201901W4/百度的原罪—封杀Google的黑内幕-puck.html">
+            
+                <a href="../../Share/201901W4/百度的原罪—封杀Google的黑内幕-puck.html">
+            
+                    
+                    百度的原罪—封杀Google的黑内幕-puck.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5.15" data-path="../../Share/201901W4/解决bug的偏方-Iris.html">
+            
+                <a href="../../Share/201901W4/解决bug的偏方-Iris.html">
+            
+                    
+                    解决bug的偏方-Iris.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Android下的JNI使用-张大Ant.md</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <table>
+<thead>
+<tr>
+<th style="text-align:center">&#x8BFE;&#x6B21;&#x5E8F;&#x53F7;</th>
+<th style="text-align:center">&#x7B2C;&#x4E00;&#x8282;&#x8BFE;</th>
+<th style="text-align:center">&#x7B2C;&#x4E8C;&#x8282;&#x8BFE;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">JNIEnv &#x6A21;&#x62DF;&#x3001;JNI &#x6570;&#x636E;&#x7C7B;&#x578B;</td>
+<td style="text-align:center">C &#x8BBF;&#x95EE;Java&#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">NDK &#x73AF;&#x5883;&#x642D;&#x5EFA;&#x4E0E;&#x5165;&#x95E8;&#x4F7F;&#x7528;</td>
+<td style="text-align:center">&#x8BBF;&#x95EE;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3001;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x3001;&#x4E2D;&#x6587;&#x4E71;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;&#x3001;&#x5F15;&#x7528;</td>
+<td style="text-align:center">&#x5F02;&#x5E38;&#x5904;&#x7406;&#x3001;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#x3001;&#x9884;&#x5904;&#x7406;&#x6307;&#x4EE4;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x8FD8;&#x9700;&#x8981;&#x5F3A;&#x5316;&#x7684;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li>jni &#x4E2D;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x53CA;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1B;</li>
+</ul>
+</blockquote>
+<h1 id="1-&#x9884;&#x7F16;&#x8BD1;&#x6307;&#x4EE4;">1 &#x9884;&#x7F16;&#x8BD1;&#x6307;&#x4EE4;</h1>
+<h2 id="11-include">1.1 include</h2>
+<p><code>#include ...</code> &#x5C5E;&#x4E8E; C &#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x9884;&#x7F16;&#x8BD1;&#x6307;&#x4EE4;&#x3002;C &#x8BED;&#x8A00;&#x7684;&#x6574;&#x4E2A;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x7F16;&#x8F91;&#x6E90;&#x4EE3;&#x7801;&#xFF1B;</li>
+<li>&#x7F16;&#x8BD1;&#xFF1A;&#x5F62;&#x6210;&#x76EE;&#x6807;&#x4EE3;&#x7801; <code>.obj</code> &#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x94FE;&#x63A5;&#xFF1A;&#x5C06;&#x76EE;&#x6807;&#x4EE3;&#x7801;&#x4E0E; C &#x51FD;&#x6570;&#x5E93;&#x94FE;&#x63A5;&#x5408;&#x5E76;&#xFF0C;&#x5F62;&#x6210;&#x6700;&#x7EC8;&#x7684;&#x53EF;&#x6267;&#x884C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x6267;&#x884C;&#xFF1A;&#x83B7;&#x5F97;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#xFF1B;</li>
+</ol>
+<p>&#x5176;&#x4E2D;&#x5728;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#xFF0C;&#x8FD8;&#x5B58;&#x5728;&#x300E;&#x9884;&#x7F16;&#x8BD1;&#x300F;&#x8FC7;&#x7A0B;&#xFF1A;&#x4E3A;&#x7F16;&#x8BD1;&#x4F5C;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B8C;&#x6210;&#x4EE3;&#x7801;&#x6587;&#x672C;&#x7684;&#x66FF;&#x6362;&#x5DE5;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>* argv)</span> </span>{
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;myTxt.txt&quot;</span></span>
+
+    system(<span class="hljs-string">&quot;pause&quot;</span>);
+}
+</code></pre>
+<p>&#x6BD4;&#x5982;&#x6B64;&#x5904;&#x7684; <code>#include &quot;myTxt.txt&quot;</code> &#x6307;&#x4EE4;&#x5C31;&#x662F;&#x5C5E;&#x4E8E;&#x9884;&#x7F16;&#x8BD1;&#x6307;&#x4EE4;&#xFF0C;&#x63D2;&#x5165;&#x4E86;&#x4E0B;&#x8FF0;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;This is a included file!\n&quot;</span>);
+</code></pre>
+<p>&#x800C;&#x5934;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#x662F;&#xFF1A;&#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#x6709;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x94FE;&#x63A5;&#x5668;&#x8D1F;&#x8D23;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="12-define">1.2 define</h2>
+<p><code>define</code>&#x6307;&#x4EE4;&#x6709;&#x4EE5;&#x4E0B; 3 &#x79CD;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li><p>&#x5B9A;&#x4E49;&#x6807;&#x8BC6;&#x4EE5;&#x9632;&#x6B62;&#x6587;&#x4EF6;&#x91CD;&#x590D;&#x5F15;&#x5165;&#xFF1B;</p>
+<p>&#x6BD4;&#x5982; <code>jni.h</code> &#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x6807;&#x8BC6; <code>.cpp</code> &#x8BED;&#x6CD5;&#x7684;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p>~~~c</p>
+<h1 id="ifdef-cplusplus">ifdef __cplusplus</h1>
+<p>/*</p>
+<ul>
+<li>Reference types, in C++
+*/
+class _jobject {};
+class _jclass : public _jobject {};
+class _jstring : public _jobject {};
+class _jarray : public _jobject {};
+class _jobjectArray : public _jarray {};
+class _jbooleanArray : public _jarray {};
+class _jbyteArray : public _jarray {};
+class _jcharArray : public _jarray {};
+class _jshortArray : public _jarray {};
+class _jintArray : public _jarray {};
+class _jlongArray : public _jarray {};
+class _jfloatArray : public _jarray {};
+class _jdoubleArray : public _jarray {};
+class _jthrowable : public _jobject {};</li>
+</ul>
+<p>typedef _jobject<em>       jobject;
+typedef _jclass</em>        jclass;
+typedef _jstring<em>       jstring;
+typedef _jarray</em>        jarray;
+typedef _jobjectArray<em>  jobjectArray;
+typedef _jbooleanArray</em> jbooleanArray;
+typedef _jbyteArray<em>    jbyteArray;
+typedef _jcharArray</em>    jcharArray;
+typedef _jshortArray<em>   jshortArray;
+typedef _jintArray</em>     jintArray;
+typedef _jlongArray<em>    jlongArray;
+typedef _jfloatArray</em>   jfloatArray;
+typedef _jdoubleArray<em>  jdoubleArray;
+typedef _jthrowable</em>    jthrowable;
+typedef _jobject*       jweak;</p>
+</li>
+</ul>
+<h1 id="else--not-cplusplus-">else /<em> not __cplusplus </em>/</h1>
+<p>  /*</p>
+<ul>
+<li><p>Reference types, in C.
+<em>/
+typedef void</em>           jobject;
+typedef jobject         jclass;
+typedef jobject         jstring;
+typedef jobject         jarray;
+typedef jarray          jobjectArray;
+typedef jarray          jbooleanArray;
+typedef jarray          jbyteArray;
+typedef jarray          jcharArray;
+typedef jarray          jshortArray;
+typedef jarray          jintArray;
+typedef jarray          jlongArray;
+typedef jarray          jfloatArray;
+typedef jarray          jdoubleArray;
+typedef jobject         jthrowable;
+typedef jobject         jweak;</p>
+<h1 id="endif--not-cplusplus-">endif /<em> not __cplusplus </em>/</h1>
+<pre><code>
+&#x7528;&#x4E8E;&#x533A;&#x5206; `.c` &#x6587;&#x4EF6; &#x548C; `.cpp` &#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x6807;&#x8BC6;&#x4F7F;&#x7528;&#x7684;&#x4E0D;&#x540C;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x3002;
+
+&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x5934;&#x6587;&#x4EF6;&#x7684;&#x91CD;&#x590D;&#x5F15;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5934;&#x6587;&#x4EF6;&#x5F15;&#x5165;&#x7684;&#x6807;&#x8BC6;&#xFF1A;
+
+~~~c
+// #pragma once
+
+#ifndef AH
+#define AH
+#include &quot;B.h&quot;
+
+void printfA();
+
+#endif
+</code></pre><p>&#x4E0A;&#x8FF0;&#x662F;&#x5B9A;&#x4E49;&#x7684; <code>A.h</code>&#xFF0C;&#x4EE5;&#x53CA;&#x4E0B;&#x8FF0;&#x7684; <code>B.h</code> &#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">// #pragma once</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> BH</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BH</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;A.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printfB</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x6807;&#x8BC6;&#xFF0C;&#x9632;&#x6B62;&#x5FAA;&#x73AF;&#x5730;&#x5F15;&#x5165;&#x5934;&#x6587;&#x4EF6;&#x3002;</p>
+</li>
+</ul>
+<ul>
+<li><p>&#x5B9A;&#x4E49;&#x5E38;&#x6570;&#xFF1A;<code>#define MAX 100</code> &#x7F16;&#x8BD1;&#x5668;&#x4E2D;&#x7F16;&#x8BD1;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x505A;&#x6587;&#x672C;&#x7684;&#x66FF;&#x6362;&#x3002;</p>
+</li>
+<li><p>&#x5B9A;&#x4E49;&#x5B8F;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;A.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printfA</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;printf A\n&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printfB</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;printf B\n&quot;</span>);
+}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> printf(NAME) printf##NAME()</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>* argv)</span> </span>{
+<span class="hljs-comment">// #include &quot;myTxt.txt&quot;</span>
+
+    <span class="hljs-built_in">printf</span>(A);
+
+    system(<span class="hljs-string">&quot;pause&quot;</span>);
+}
+</code></pre>
+<p>&#x7528;&#x7EA2;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x5B9A;&#x4E49;&#x4E86;&#x51FD;&#x6570;&#x522B;&#x540D;&#x3002;</p>
+</li>
+</ul>
+<h1 id="2-jni-&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">2 JNI &#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h1>
+<p>JNI&#xFF08;Java Native Interface&#xFF09;&#xFF1A;Java &#x8C03;&#x7528; C/C++&#xFF0C;C/C++ &#x8C03;&#x7528; Java &#x7684;&#x4E00;&#x5957; API&#x3002;</p>
+<blockquote>
+<p>Java &#x4EE3;&#x7801; &#x548C;  Native &#x4EE3;&#x7801;&#x76F8;&#x4E92;&#x8BBF;&#x95EE;&#xFF01;</p>
+<p>NDK &#x548C; JNI &#x662F;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li><p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x7B80;&#x5355;&#x7684;&#x4F7F;&#x7528; Java &#x4EE3;&#x7801;&#x8C03;&#x7528; Native &#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; Eclipse &#x7684; Java &#x5DE5;&#x7A0B;&#xFF1B;</p>
+<p>&#x540C;&#x65F6;&#x4F7F;&#x7528; Visual Studio &#x4F5C;&#x4E3A;&#x7F16;&#x8BD1; C/C++ &#x4EE3;&#x7801;&#x7684;&#x5DE5;&#x5177;&#xFF1B;</p>
+<p>&#x5728; Windows &#x5E73;&#x53F0;&#x4E0B;&#xFF0C;&#x751F;&#x6210;&#x7684;&#x662F; .dll &#x6587;&#x4EF6;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x662F;&#x5728; Android &#x5DE5;&#x7A0B;&#x4E2D;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528; NDK &#xFF0C;&#x4E14;&#x5728; NDK &#x4E2D;&#x6709;&#x4F7F;&#x7528;&#x5230; JNI&#x3002;</p>
+<p>NDK &#x66FF;&#x4EE3;&#x4E86; Visual Studio &#x4F5C;&#x4E3A;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x3002;</p>
+<p>&#x5728; Linux &#x5E73;&#x53F0;&#x4E0B;&#xFF0C;&#x751F;&#x6210;&#x7684;&#x662F; .so &#x6587;&#x4EF6;&#x3002;</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="21-java-&#x8BBF;&#x95EE;-native">2.1 Java &#x8BBF;&#x95EE; Native</h2>
+<p>&#x5728; Eclipse &#x4E2D;&#x521B;&#x5EFA; Java &#x5DE5;&#x7A0B;&#xFF0C;&#x5E76;&#x5728;&#x5176;&#x4E2D;&#x8BBF;&#x95EE; Native &#x65B9;&#x6CD5;&#xFF0C;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li><p>&#x7F16;&#x5199; native &#x65B9;&#x6CD5;&#xFF1B;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.arthur.ndk;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JniTest</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">native</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getStringFromNative</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(getStringFromNative());
+    }
+
+}
+</code></pre>
+<p>&#x7B80;&#x5355;&#x5730;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A; JniTest &#x7C7B;&#xFF0C;&#x5E76;&#x5728;&#x5176;&#x4E2D;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A; native &#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p>javah &#x547D;&#x4EE4;&#xFF0C;&#x751F;&#x6210; .h &#x5934;&#x6587;&#x4EF6;&#xFF1B;</p>
+<pre><code class="lang-xml">E:\app\com.arthur.ndk\src&gt;javah com.arthur.ndk.JniTest
+</code></pre>
+<p>&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x76EE;&#x5F55;&#x4E0B; src &#x4E2D;&#x4F7F;&#x7528; javah &#x6307;&#x4EE4;&#x751F;&#x6210; .java &#x6587;&#x4EF6;&#x4E2D; native &#x5BF9;&#x5E94;&#x7684;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x4E3A;&#xFF1A;<code>com_arthur_ndk_JniTest.h</code></p>
+<pre><code class="lang-c"><span class="hljs-comment">/* DO NOT EDIT THIS FILE - it is machine generated */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;jni.h&gt;</span></span>
+<span class="hljs-comment">/* Header for class com_arthur_ndk_JniTest */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _Included_com_arthur_ndk_JniTest</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _Included_com_arthur_ndk_JniTest</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> __cplusplus</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> {
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="hljs-comment">/*
+ * Class:     com_arthur_ndk_JniTest
+ * Method:    getStringFromNative
+ * Signature: ()Ljava/lang/String;
+ */</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_getStringFromNative</span>
+  <span class="hljs-params">(JNIEnv *, jclass)</span></span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> __cplusplus</span>
+}
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+</li>
+<li><p>&#x590D;&#x5236; .h &#x5934;&#x6587;&#x4EF6;&#x5230; cpp &#x5DE5;&#x7A0B;&#x4E2D;&#xFF1B;</p>
+<p>&#x610F;&#x5473;&#x7740;&#x5C06;&#x5728; VS2015 IDE &#x4E2D;&#x7F16;&#x5199; Native &#x4EE3;&#x7801;&#xFF0C;&#x5B9E;&#x73B0;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>&#x5176;&#x4E2D; <code>#include &lt;jni.h&gt;</code> &#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x9700;&#x8981;&#x5728; jdk &#x4E2D;&#x627E;&#x51FA;&#x6765;&#x5E76;&#x590D;&#x5236;&#x5230;&#x5DE5;&#x7A0B;&#x4E2D;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>&#x590D;&#x5236; jni.h &#x548C; jni_md.h &#x6587;&#x4EF6;&#x5230; cpp &#x5DE5;&#x7A0B;&#x4E2D;&#xFF1B;</p>
+</li>
+<li><p>&#x5B9E;&#x73B0; .h &#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x51FD;&#x6570;&#xFF1B;</p>
+<p>~~~c</p>
+<h1 id="define-crtsecurenowarnings">define _CRT_SECURE_NO_WARNINGS</h1>
+<h1 id="include-">include <stdio.h></stdio.h></h1>
+<h1 id="include-">include <stdlib.h></stdlib.h></h1>
+<h1 id="include-comarthurndkjnitesth">include &quot;com_arthur_ndk_JniTest.h&quot;</h1>
+<p>/*</p>
+<ul>
+<li>Class:     com_arthur_ndk_JniTest</li>
+<li>Method:    getStringFromNative</li>
+<li>Signature: ()Ljava/lang/String;
+<em>/
+JNIEXPORT jstring JNICALL Java_com_arthur_ndk_JniTest_getStringFromNative
+(JNIEnv </em>jniEnv, jclass jclz) {
+  // &#x5C06; C &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8F6C;&#x5316;&#x4E3A; Java &#x5B57;&#x7B26;&#x4E32;
+  return (*jniEnv)-&gt;NewStringUTF(jniEnv, &quot;Hello NDK!&quot;);
+}</li>
+</ul>
+<p>void main(int argc, char* argv) {</p>
+<pre><code>printf(&quot;Hello World!\n&quot;);
+</code></pre></li>
+</ol>
+<pre><code>   system(&quot;pause&quot;);
+</code></pre><p>   }</p>
+<pre><code>
+   `NewStringUTF()` &#x5C06; C &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8F6C;&#x5316;&#x4E3A; Java &#x5B57;&#x7B26;&#x4E32;&#x3002;
+
+6. &#x751F;&#x6210; .dll &#x6587;&#x4EF6;&#xFF1B;
+
+   &#x9879;&#x76EE;&#x7684;**&#x914D;&#x7F6E;&#x7C7B;&#x578B;**&#x4E3A;&#xFF1A;&#x52A8;&#x6001;&#x5E93; .dll&#x3002;
+
+   IDE &#x5DE5;&#x5177;&#x7684;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#xFF0C;**&#x751F;&#x6210;&#x89E3;&#x51B3;&#x65B9;&#x6848;**&#x540E;&#xFF0C;&#x751F;&#x6210;&#x4E86;&#x547D;&#x540D;&#x4E3A;&#xFF1A;CProjectDemo.dll &#x52A8;&#x6001;&#x5E93;&#x6587;&#x4EF6;&#x3002;
+
+7. &#x914D;&#x7F6E; .dll &#x6587;&#x4EF6;&#x6240;&#x5728;&#x76EE;&#x5F55;&#x5230;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1B;
+
+   &#x539F;&#x56E0;&#xFF1A;&#x5728;&#x76EE;&#x6807; Java &#x5DE5;&#x7A0B;&#x4E2D;&#xFF0C;&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x52A8;&#x6001;&#x5E93;&#x6587;&#x4EF6;&#x3002;
+
+8. &#x91CD;&#x542F;Eclipse&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x5DE5;&#x7A0B;&#x3002;
+
+   ~~~java
+   package com.arthur.ndk;
+
+   public class JniTest {
+
+       public native static String getStringFromNative();
+
+       public static void main(String[] args) {
+           System.out.println(getStringFromNative());
+       }
+
+       static{
+           try{
+               String content = System.getProperty(&quot;java.library.path&quot;);
+               System.out.println(&quot;content:&quot;+content);
+
+               System.loadLibrary(&quot;CProjectDemo&quot;);
+           }catch(Exception e){
+               System.out.println(e.getMessage());
+           }
+       }
+
+   }
+</code></pre><p>&#x5728; Windows &#x5E73;&#x53F0;&#x4E0B;&#xFF0C;Java &#x5DE5;&#x7A0B;&#x9ED8;&#x8BA4;&#x5728;&#x52A0;&#x8F7D; Library &#x65F6;&#xFF0C;&#x4F1A;&#x53BB;&#x627E;&#x5BF9;&#x5E94;&#x7684; Xxx.dll &#x6587;&#x4EF6;&#xFF1B;&#x5BF9;&#x5E94;&#x5728; Linux &#x5E73;&#x53F0;&#x4E0B;&#xFF0C;&#x52A0;&#x8F7D;&#x7684;&#x662F; Xxx.so &#x6587;&#x4EF6;&#x3002;</p>
+<blockquote>
+<p><strong>&#x9759;&#x6001;&#x5E93;</strong>&#x548C;<strong>&#x52A8;&#x6001;&#x5E93;</strong>&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li>&#x300E;&#x9759;&#x6001;&#x5E93;&#xFF08;&#x53C8;&#x79F0;&#x4E3A;&#xFF1A;&#x9759;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#xFF09;&#x300F;&#x662F;&#x628A;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x7F16;&#x8BD1;&#x5728;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6269;&#x5C55;&#x540D;&#x4E3A; .lib&#x3002;&#x5728; Linux &#x4E0B;&#x5BF9;&#x5E94;&#x7684;&#x662F; .a &#x6587;&#x4EF6;&#x3002;&#x5728;&#x6700;&#x7EC8;&#x7684;&#x53EF;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x6709;&#x9759;&#x6001;&#x5E93;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6307;&#x4EE4;&#x3002;</li>
+<li>&#x300E;&#x52A8;&#x6001;&#x5E93;&#xFF08;&#x53C8;&#x79F0;&#x4E3A;&#xFF1A;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x3001;&#x5171;&#x4EAB;&#x5E93;&#xFF09;&#x300F;&#x4EC5;&#x662F;&#x628A; .dll &#x4E2D;&#x7684;&#x51FD;&#x6570;&#x540D;&#x548C;&#x53C2;&#x6570;&#x653E;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x52A0;&#x8F7D;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x5728; Linux &#x4E0B;&#x5BF9;&#x5E94;&#x7684;&#x662F; .so &#x6587;&#x4EF6;&#x3002;&#x5728;&#x6700;&#x7EC8;&#x7684;&#x53EF;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x6709;&#x52A8;&#x6001;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x6307;&#x4EE4;&#x3002;</li>
+<li>&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x4EE3;&#x7801;&#xFF1B;</li>
+</ul>
+</blockquote>
+<h2 id="22-jnienv">2.2 JNIEnv</h2>
+<p>&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#xFF0C;&#x53D1;&#x73B0; C &#x548C; C++ &#x4EE3;&#x7801;&#x5728;&#x4F7F;&#x7528; JNIEnv &#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x65F6;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5199;&#x6CD5;&#x3002;&#x5728; <code>jni.h</code> &#x6587;&#x4EF6;&#x6709;&#x5982;&#x4E0B;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> _JNIEnv;
+<span class="hljs-keyword">struct</span> _JavaVM;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> JNINativeInterface* C_JNIEnv;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> defined(__cplusplus)</span>
+<span class="hljs-keyword">typedef</span> _JNIEnv JNIEnv;
+<span class="hljs-keyword">typedef</span> _JavaVM JavaVM;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> JNINativeInterface* JNIEnv;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> JNIInvokeInterface* JavaVM;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+<span class="hljs-comment">/*
+ * Table of interface function pointers.
+ */</span>
+<span class="hljs-keyword">struct</span> JNINativeInterface {
+    <span class="hljs-keyword">void</span>*       reserved0;
+    <span class="hljs-keyword">void</span>*       reserved1;
+    <span class="hljs-keyword">void</span>*       reserved2;
+    <span class="hljs-keyword">void</span>*       reserved3;
+
+    jint        (*GetVersion)(JNIEnv *);
+
+    ...
+}
+
+<span class="hljs-comment">/*
+ * C++ object wrapper.
+ *
+ * This is usually overlaid on a C struct whose first element is a
+ * JNINativeInterface*.  We rely somewhat on compiler behavior.
+ */</span>
+<span class="hljs-keyword">struct</span> _JNIEnv {
+    <span class="hljs-comment">/* do not rename this; it does not seem to be entirely opaque */</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> JNINativeInterface* functions;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> defined(__cplusplus)</span>
+
+    <span class="hljs-function">jint <span class="hljs-title">GetVersion</span><span class="hljs-params">()</span>
+    </span>{ <span class="hljs-keyword">return</span> functions-&gt;GetVersion(<span class="hljs-keyword">this</span>); }
+
+    ...
+}
+</code></pre>
+<p>&#x53EF;&#x77E5;&#xFF1A;</p>
+<ul>
+<li>C &#x6587;&#x4EF6;&#x4E2D;&#xFF1A;JNIEnv &#x5B9E;&#x9645;&#x662F; <code>struct JNINativeInterface*</code> &#x7C7B;&#x578B;&#xFF0C;&#x6307;&#x9488;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#xFF1B;</li>
+<li>C++ &#x6587;&#x4EF6;&#x4E2D;&#xFF1A;JNIEnv &#x5B9E;&#x9645;&#x662F; <code>struct _JNIEnv</code> &#x7C7B;&#x578B;&#xFF0C;&#x7ED3;&#x6784;&#x4F53;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x3002;&#x800C;&#x8BE5;&#x7ED3;&#x6784;&#x4F53;&#x5185;&#x90E8;&#x5219;&#x53C8;&#x5B9A;&#x4E49;&#x4E86;<code>struct JNINativeInterface*</code> &#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x4F5C;&#x4E3A;&#x5143;&#x7D20;&#x3002;<strong>C++ &#x53EA;&#x662F;&#x5BF9; C &#x7684;&#x90A3;&#x4E00;&#x5957;&#x8FDB;&#x884C;&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x4E3A;&#x6307;&#x9488;&#xFF08;C++ &#x662F;&#x6BD4; C &#x66F4;&#x62BD;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#xFF09;</strong>&#x3002;</li>
+<li>&#x5177;&#x4F53;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x5728; <code>struct JNINativeInterface</code> &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x3002; </li>
+</ul>
+<p>&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    getStringFromNative
+* Signature: ()Ljava/lang/String;
+*/</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_getStringFromNative</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jclass jclz)</span> </span>{
+    <span class="hljs-comment">// &#x5C06; C &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8F6C;&#x5316;&#x4E3A; Java &#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="hljs-keyword">return</span> (*jniEnv)-&gt;NewStringUTF(jniEnv, <span class="hljs-string">&quot;Hello NDK!&quot;</span>);
+
+    <span class="hljs-comment">// cpp return jniEnv-&gt;NewStringUTF(&quot;Hello NDK!&quot;);</span>
+}
+</code></pre>
+<ul>
+<li>C &#x6587;&#x4EF6;&#x4E2D;&#xFF1A;jniEnv &#x53D8;&#x91CF;&#x5B9E;&#x9645;&#x5C31;&#x662F; &#x4E8C;&#x7EA7;&#x6307;&#x9488;&#x53D8;&#x91CF;&#xFF1B;</li>
+<li>C++ &#x6587;&#x4EF6;&#x4E2D;&#xFF1A;jniEnv &#x53D8;&#x91CF;&#x5B9E;&#x9645;&#x662F; &#x4E00;&#x7EA7;&#x6307;&#x9488;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x5728;&#x8C03;&#x7528;&#x5177;&#x4F53;&#x65B9;&#x6CD5;&#x65F6;&#x4F1A;&#x5C06; this &#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9; <code>struct JNINativeInterface</code> &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x5177;&#x4F53;&#x4E0D;&#x540C;&#x53EF;&#x4ECE;&#x4E0B;&#x8FF0;&#x5B9E;&#x4F8B;&#x770B;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> JNINativeInterface_* JNIEnv;
+
+<span class="hljs-keyword">struct</span> JNINativeInterface_ {
+    <span class="hljs-keyword">char</span>* (*NewStringUTF)(JNIEnv*, <span class="hljs-keyword">char</span>*);
+};
+
+<span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">getString</span><span class="hljs-params">(JNIEnv* env, <span class="hljs-keyword">char</span>* str)</span> </span>{
+    <span class="hljs-keyword">return</span> str;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>* argv)</span> </span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!\n&quot;</span>);
+
+    <span class="hljs-keyword">struct</span> JNINativeInterface_ struct_env;
+    struct_env.NewStringUTF = getString;
+
+    JNIEnv jniEnv = &amp;struct_env;
+    JNIEnv* env = &amp;jniEnv;
+
+    <span class="hljs-keyword">char</span>* str = (*env)-&gt;NewStringUTF(env, <span class="hljs-string">&quot;Hello NDK!&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, str);
+
+    system(<span class="hljs-string">&quot;pause&quot;</span>);
+}
+</code></pre>
+<p>&#x6B64;&#x5916; C++ &#x548C; C &#x4E2D;&#x4F7F;&#x7528; struct &#x7684;&#x4E0D;&#x540C;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> defined(__cplusplus)</span>
+<span class="hljs-keyword">typedef</span> _JNIEnv JNIEnv;
+<span class="hljs-keyword">typedef</span> _JavaVM JavaVM;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> JNINativeInterface* JNIEnv;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> JNIInvokeInterface* JavaVM;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>&#x5728; C++ &#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x522B;&#x540D;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x52A0; struct &#x6807;&#x8BC6;&#xFF01;</p>
+<blockquote>
+<p>&#x6700;&#x7EC8;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x4E0D;&#x540C;&#xFF1F;</p>
+</blockquote>
+<h1 id="3-jni-&#x6570;&#x636E;&#x7C7B;&#x578B;">3 JNI &#x6570;&#x636E;&#x7C7B;&#x578B;</h1>
+<p>Java &#x5C42;&#x5B9A;&#x4E49;&#x7684; native &#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x751F;&#x6210;&#x5934;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> com.arthur.ndk;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JniTest</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">native</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getStringFromNative</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">native</span> String <span class="hljs-title">getStringFromNativeOther</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(getStringFromNative());
+
+        JniTest test = <span class="hljs-keyword">new</span> JniTest();
+        System.out.println(<span class="hljs-string">&quot;Other&#xFF1A;&quot;</span> + test.getStringFromNativeOther());
+    }
+
+    <span class="hljs-keyword">static</span> {
+        <span class="hljs-keyword">try</span> {
+            System.loadLibrary(<span class="hljs-string">&quot;CProjectDemo&quot;</span>);
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x4E0A;&#x8FF0;&#x5B9A;&#x4E49;&#x4E86; 2 &#x4E2A; native &#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5176;&#x58F0;&#x660E;&#x65B9;&#x5F0F;&#x6709;&#x4E0D;&#x540C;&#xFF1A;</p>
+<ul>
+<li><code>public native static</code></li>
+<li><code>public native</code></li>
+</ul>
+<p>&#x5BF9;&#x5E94;&#x751F;&#x6210;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x58F0;&#x660E;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/* DO NOT EDIT THIS FILE - it is machine generated */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;jni.h&quot;</span></span>
+<span class="hljs-comment">/* Header for class com_arthur_ndk_JniTest */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _Included_com_arthur_ndk_JniTest</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _Included_com_arthur_ndk_JniTest</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> __cplusplus</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> {
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="hljs-comment">/*
+ * Class:     com_arthur_ndk_JniTest
+ * Method:    getStringFromNative
+ * Signature: ()Ljava/lang/String;
+ */</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_getStringFromNative</span>
+  <span class="hljs-params">(JNIEnv *, jclass)</span></span>;
+
+<span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    getStringFromNativeOther
+* Signature: ()Ljava/lang/String;
+*/</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_getStringFromNativeOther</span>
+<span class="hljs-params">(JNIEnv *, jobject)</span></span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> __cplusplus</span>
+}
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>&#x7ED3;&#x8BBA;&#xFF1A;</p>
+<ul>
+<li>&#x6BCF;&#x4E2A; native &#x51FD;&#x6570;&#xFF0C;&#x90FD;&#x81F3;&#x5C11;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;<code>(JNIEnv *, jclass)</code> &#x6216;&#x8005;&#x662F; <code>(JNIEnv *, jobject)</code>&#xFF1B;</li>
+<li>&#x5F53; native &#x65B9;&#x6CD5;&#x58F0;&#x660E;&#x4E3A;&#x9759;&#x6001;&#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7684; native &#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E3A; jclass&#xFF0C;&#x4EE3;&#x8868; Java &#x5C42; class &#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>&#x5F53; native &#x65B9;&#x6CD5;&#x58F0;&#x660E;&#x4E3A;&#x975E;&#x9759;&#x6001;&#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7684; native &#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E3A; jobject&#xFF0C;&#x4EE3;&#x8868; Java &#x5C42; &#x8BE5;&#x65B9;&#x6CD5;&#x6240;&#x5C5E;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;</li>
+</ul>
+<p>Java&#x5C42; &#x6570;&#x636E;&#x7C7B;&#x578B; &#x6620;&#x5C04;&#x5230; JNI &#x63A5;&#x53E3;&#xFF0C;&#x4EE5;&#x53CA; JNI &#x63A5;&#x53E3; &#x548C; C &#x8BED;&#x8A00;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#xFF1A;</p>
+<pre><code>Java &#x7C7B;&#x578B; --&gt; JNI &#x7C7B;&#x578B; --&gt; C &#x7C7B;&#x578B;
+</code></pre><p>JNI &#x6570;&#x636E;&#x7C7B;&#x578B;&#x5206;&#x4E3A;&#xFF1A;<strong>&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong> &#x548C; <strong>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#x3001;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6570;&#x7EC4;&#x3001;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<h1 id="4-native-&#x8BBF;&#x95EE;-java-&#x5B9E;&#x4F8B;&#x7684;&#x5C5E;&#x6027;">4 Native &#x8BBF;&#x95EE; Java &#x5B9E;&#x4F8B;&#x7684;&#x5C5E;&#x6027;</h1>
+<p>&#x76F8;&#x5F53;&#x4E8E;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x300E;&#x53CC;&#x5411;&#x901A;&#x4FE1;&#x300F;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;com_arthur_ndk_JniTest.h&quot;</span></span>
+
+<span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    getStringFromNative
+* Signature: ()Ljava/lang/String;
+*/</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_getStringFromNative</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jclass jclz)</span> </span>{
+    <span class="hljs-comment">// &#x5C06; C &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8F6C;&#x5316;&#x4E3A; Java &#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="hljs-keyword">return</span> (*jniEnv)-&gt;NewStringUTF(jniEnv, <span class="hljs-string">&quot;Hello NDK!&quot;</span>);
+}
+
+<span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    getStringFromNativeOther
+* Signature: ()Ljava/lang/String;
+*/</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_getStringFromNativeOther</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj)</span> </span>{
+    <span class="hljs-keyword">return</span> (*jniEnv)-&gt;NewStringUTF(jniEnv, <span class="hljs-string">&quot;Hello NDK_Other!&quot;</span>);
+}
+
+<span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    accessField
+* Signature: ()Ljava/lang/String;
+*/</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_accessField</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj)</span> </span>{
+    <span class="hljs-comment">// &#x76EE;&#x6807;&#xFF1A;&#x83B7;&#x53D6;&#x5230; jobj &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;&#x540E;&#x8FD4;&#x56DE;</span>
+
+    <span class="hljs-comment">// FindClass &#x548C; GetOjbectClass &#x7684;&#x533A;&#x522B;&#xFF1F;</span>
+    jclass clazz = (*jniEnv)-&gt;GetObjectClass(jniEnv, jobj);
+
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* fieldName = <span class="hljs-string">&quot;objectField&quot;</span>;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* sig = <span class="hljs-string">&quot;Ljava/lang/String;&quot;</span>;
+
+    jfieldID fieldID = (*jniEnv)-&gt;GetFieldID(jniEnv, clazz, fieldName, sig);
+
+    jstring field = (*jniEnv)-&gt;GetObjectField(jniEnv, jobj, fieldID);
+
+    <span class="hljs-comment">// &#x5728; Eclipse &#x4E2D;&#x521B;&#x5EFA; Java &#x5DE5;&#x7A0B;&#x65F6;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#xFF1B;&#x5982;&#x679C;&#x662F; Android &#x5DE5;&#x7A0B;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x501F;&#x52A9; Log</span>
+    <span class="hljs-comment">// jstring --&gt; char[] &#x6216; char*  &#x6B64;&#x5904;&#x53C2;&#x6570;&#x4E0D;&#x80FD;&#x4E3A; JNIN_TRUE</span>
+    <span class="hljs-keyword">const</span> jbyte* value = (*jniEnv)-&gt;GetStringUTFChars(jniEnv, field, JNI_FALSE);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Native field content is: %s&quot;</span>, value);
+
+    <span class="hljs-keyword">char</span> tmp[<span class="hljs-number">20</span>] = <span class="hljs-string">&quot;changed: &quot;</span>;
+    <span class="hljs-built_in">strcat</span>(tmp, value);
+
+    <span class="hljs-comment">// char[] &#x6216; char* &#x8F6C;&#x5316;&#x4E3A; jstring</span>
+    jstring changed = (*jniEnv)-&gt;NewStringUTF(jniEnv, tmp);
+
+    <span class="hljs-comment">// &#x91CD;&#x65B0;&#x8BBE;&#x7F6E; &#x7C7B;&#x5BF9;&#x8C61;&#x7684; &#x5C5E;&#x6027;&#x503C;</span>
+    (*jniEnv)-&gt;SetObjectField(jniEnv, jobj, fieldID, changed);
+
+    (*jniEnv)-&gt;ReleaseStringUTFChars(jniEnv, field, value);
+
+    <span class="hljs-keyword">return</span> changed;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>* argv)</span> </span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!\n&quot;</span>);
+    system(<span class="hljs-string">&quot;pause&quot;</span>);
+}
+</code></pre>
+<p>Java &#x5C42;&#x4EE3;&#x7801; &#x89E6;&#x53D1; &#x8BBF;&#x95EE; Native &#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x65F6; Native &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#x6240;&#x5C5E;&#x7C7B;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4FEE;&#x6539;&#x8BE5;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7ED9; Java&#x5C42;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x901A;&#x8FC7; JNI&#xFF0C;Native &#x65B9;&#x6CD5;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#xFF1A;&#x5C5E;&#x6027;&#x3001;&#x9759;&#x6001;&#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;&#x3001;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><img src="https://github.com/ZHANGfeng-james/AndroidNDKScenery/blob/master/NDK%E8%AF%BE%E7%A8%8B/%E9%98%B6%E6%AE%B51_%E5%88%9D%E8%AF%86NDK/pics/Java%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%E7%AD%BE%E5%90%8D%E5%88%97%E8%A1%A8.png?raw=true" alt=""></p>
+<p>&#x5FEB;&#x901F;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#x7B7E;&#x540D;&#xFF1A;</p>
+<pre><code class="lang-c">E:\app\com.arthur.ndk\bin&gt;javap -s -p com.arthur.ndk.JniTest
+Compiled from <span class="hljs-string">&quot;JniTest.java&quot;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> com.arthur.ndk.JniTest {
+  <span class="hljs-keyword">public</span> java.lang.String objectField;
+    descriptor: Ljava/lang/String;
+  <span class="hljs-keyword">static</span> {};
+    descriptor: ()V
+
+  <span class="hljs-keyword">public</span> com.arthur.ndk.JniTest();
+    descriptor: ()V
+
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> native java.lang.<span class="hljs-function">String <span class="hljs-title">getStringFromNative</span><span class="hljs-params">()</span></span>;
+    descriptor: ()Ljava/lang/String;
+
+  <span class="hljs-keyword">public</span> native java.lang.<span class="hljs-function">String <span class="hljs-title">getStringFromNativeOther</span><span class="hljs-params">()</span></span>;
+    descriptor: ()Ljava/lang/String;
+
+  <span class="hljs-keyword">public</span> native java.lang.<span class="hljs-function">String <span class="hljs-title">accessField</span><span class="hljs-params">()</span></span>;
+    descriptor: ()Ljava/lang/String;
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(java.lang.String[])</span></span>;
+    descriptor: ([Ljava/lang/String;)V
+}
+</code></pre>
+<h1 id="5-native-&#x8BBF;&#x95EE;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;">5 Native &#x8BBF;&#x95EE;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;</h1>
+<p>&#x901A;&#x8FC7;&#x8BBF;&#x95EE;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728; Native &#x4E2D;&#x521B;&#x5EFA;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x8FF0;&#x5C31;&#x662F;&#x5728; Native &#x4EE3;&#x7801;&#x4E2D;&#x8BBF;&#x95EE; java.util.Date &#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E86;&#x8BE5;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    accessConstructor
+* Signature: ()J
+*/</span>
+<span class="hljs-function">JNIEXPORT jobject JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_accessConstructor</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj)</span> </span>{
+    <span class="hljs-comment">// &#x5728; Native &#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x8BBF;&#x95EE;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;</span>
+    jclass cls = (*jniEnv)-&gt;FindClass(jniEnv, <span class="hljs-string">&quot;java/util/Date&quot;</span>);
+    <span class="hljs-comment">// &#x83B7;&#x53D6; jmethodID</span>
+    jmethodID methodID = (*jniEnv)-&gt;GetMethodID(jniEnv, cls, <span class="hljs-string">&quot;&lt;init&gt;&quot;</span>, <span class="hljs-string">&quot;()V&quot;</span>);
+    <span class="hljs-comment">// &#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;</span>
+    jobject obj = (*jniEnv)-&gt;NewObject(jniEnv, cls, methodID);
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F85;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x7684; jmethodID</span>
+    jmethodID mid = (*jniEnv)-&gt;GetMethodID(jniEnv, cls, <span class="hljs-string">&quot;getTime&quot;</span>, <span class="hljs-string">&quot;()J&quot;</span>);
+    jlong time = (*jniEnv)-&gt;CallLongMethod(jniEnv, obj, mid);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Get Time:%lld\n&quot;</span>, time);
+
+    <span class="hljs-keyword">return</span> obj;
+}
+</code></pre>
+<h1 id="6-native-&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;">6 Native &#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;</h1>
+<p>&#x5728; Java &#x5C42;&#x4E2D;&#x521B;&#x5EFA;&#x4E86; &#x5B50;&#x7C7B;&#x5BF9;&#x8C61;&#xFF08;&#x7236;&#x7C7B;&#x5F15;&#x7528;&#x6307;&#x5411;&#x5B50;&#x7C7B;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF09;&#x3002;&#x5982;&#x679C;&#x5728; Java &#x5C42;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x5BF9;&#x8C61;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x5B50;&#x7C7B;&#x88AB;&#x8986;&#x5199;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> com.arthur.ndk;
+
+<span class="hljs-keyword">import</span> java.util.Date;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JniTest</span> </span>{
+
+    ...
+
+    <span class="hljs-keyword">public</span> Human human = <span class="hljs-keyword">new</span> Man();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">native</span> <span class="hljs-keyword">void</span> <span class="hljs-title">accessNonVirtualMethod</span><span class="hljs-params">()</span></span>;
+
+    ...
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        ...
+        test.human.sayHi();
+        ...
+    }
+
+    <span class="hljs-keyword">static</span> {
+        <span class="hljs-keyword">try</span> {
+            System.loadLibrary(<span class="hljs-string">&quot;CProjectDemo&quot;</span>);
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+}
+</code></pre>
+<p>&#x4F46;&#x662F;&#x901A;&#x8FC7; accessNonVirtualMethod() &#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    accessNonVirtualMethod
+* Signature: ()V
+*/</span>
+<span class="hljs-function">JNIEXPORT <span class="hljs-keyword">void</span> JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_accessNonVirtualMethod</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj)</span> </span>{
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5230;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684; &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</span>
+    jclass cls = (*jniEnv)-&gt;GetObjectClass(jniEnv, jobj);
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8BE5;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;ID</span>
+    jfieldID fid = (*jniEnv)-&gt;GetFieldID(jniEnv, cls, <span class="hljs-string">&quot;human&quot;</span>, <span class="hljs-string">&quot;Lcom/arthur/ndk/Human;&quot;</span>);
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8BE5;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;</span>
+    jobject human_obj = (*jniEnv)-&gt;GetObjectField(jniEnv, jobj, fid);
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x65B9;&#x6CD5; jclass</span>
+    jclass sayHi_class = (*jniEnv)-&gt;FindClass(jniEnv, <span class="hljs-string">&quot;com/arthur/ndk/Human&quot;</span>);
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F85;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x7684;methodID</span>
+    jmethodID methodID = (*jniEnv)-&gt;GetMethodID(jniEnv, sayHi_class, <span class="hljs-string">&quot;sayHi&quot;</span>, <span class="hljs-string">&quot;()V&quot;</span>);
+
+    <span class="hljs-comment">// &#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x4F9D;&#x7136;&#x662F;&#x5B50;&#x7C7B;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-comment">// (*jniEnv)-&gt;CallObjectMethod(jniEnv, human_obj, methodID);</span>
+
+    (*jniEnv)-&gt;CallNonvirtualObjectMethod(jniEnv, human_obj, sayHi_class, methodID);
+}
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x83B7;&#x53D6;&#x5230;&#x7684; <code>sayHi_class</code> &#x5FC5;&#x987B;&#x662F;&#x7236;&#x7C7B;&#xFF1B;</li>
+<li>&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C;&#xFF1A;<code>CallNonvirtualObjectMethod()</code>&#xFF1B;</li>
+</ul>
+<h1 id="7-&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E71;&#x7801;&#x95EE;&#x9898;">7 &#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E71;&#x7801;&#x95EE;&#x9898;</h1>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    chineseChars
+* Signature: (Ljava/lang/String;)Ljava/lang/String;
+*/</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_chineseChars</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj, jstring jstr)</span> </span>{
+
+    <span class="hljs-comment">// const jbyte* values = (*jniEnv)-&gt;GetStringUTFChars(jniEnv, jstr, JNI_FALSE);</span>
+    <span class="hljs-comment">// printf(&quot;parameters: %s\n&quot;, values);</span>
+
+    <span class="hljs-keyword">char</span>* values = <span class="hljs-string">&quot;&#x6DF1;&#x5733;&quot;</span>;
+
+    jstring content = (*jniEnv)-&gt;NewStringUTF(jniEnv, values);
+
+    <span class="hljs-keyword">return</span> content;
+}
+</code></pre>
+<p>&#x5728; Java &#x5C42;&#x4E2D;&#x6253;&#x5370;&#x51FA; content &#x65F6;&#xFF0C;&#x4F1A;&#x6709;&#x4E71;&#x7801;&#x4EA7;&#x751F;&#x3002;</p>
+<blockquote>
+<p>&#x539F;&#x56E0;&#xFF1A;&#x6B64;&#x5904;&#x662F; UTF &#xFF0C;&#x4F46;&#x662F;&#x4E2D;&#x6587;&#x7F16;&#x7801;&#x662F; GBK2312&#x3002;</p>
+<p>&#x89E3;&#x51B3;&#x7684;&#x529E;&#x6CD5;&#xFF1A;&#x4F7F;&#x7528; Java &#x4E2D;&#x5F3A;&#x5927;&#x7684; API &#x5B9E;&#x73B0;&#x8F6C;&#x6362;&#xFF01;</p>
+</blockquote>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    chineseChars
+* Signature: (Ljava/lang/String;)Ljava/lang/String;
+*/</span>
+<span class="hljs-function">JNIEXPORT jstring JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_chineseChars</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj, jstring jstr)</span> </span>{
+
+    <span class="hljs-comment">// const jbyte* values = (*jniEnv)-&gt;GetStringUTFChars(jniEnv, jstr, JNI_FALSE);</span>
+    <span class="hljs-comment">// printf(&quot;parameters: %s\n&quot;, values);</span>
+
+    <span class="hljs-keyword">char</span> values[] = <span class="hljs-string">&quot;&#x6DF1;&#x5733;&#x548C;&#x5E7F;&#x5DDE;&quot;</span>;
+    <span class="hljs-comment">// jstring content = (*jniEnv)-&gt;NewStringUTF(jniEnv, values);</span>
+
+    <span class="hljs-comment">// &#x89E3;&#x51B3;&#x95EE;&#x9898;&#x7684;&#x601D;&#x8DEF;&#xFF1A;&#x8C03;&#x7528; Java &#x4E2D;&#x7684; API &#x5B9E;&#x73B0;&#x8F6C;&#x6362;</span>
+    jclass cls = (*jniEnv)-&gt;FindClass(jniEnv, <span class="hljs-string">&quot;java/lang/String&quot;</span>);
+    jmethodID mid = (*jniEnv)-&gt;GetMethodID(jniEnv, cls, <span class="hljs-string">&quot;&lt;init&gt;&quot;</span>, <span class="hljs-string">&quot;([BLjava/lang/String;)V&quot;</span>);
+
+    jbyteArray bytes = (*jniEnv)-&gt;NewByteArray(jniEnv, <span class="hljs-built_in">strlen</span>(values));
+    (*jniEnv)-&gt;SetByteArrayRegion(jniEnv, bytes, <span class="hljs-number">0</span>, <span class="hljs-built_in">strlen</span>(values), values);
+
+    jstring charsetName = (*jniEnv)-&gt;NewStringUTF(jniEnv, <span class="hljs-string">&quot;GB2312&quot;</span>);
+
+    <span class="hljs-keyword">return</span> (*jniEnv)-&gt;NewObject(jniEnv, cls, mid, bytes, charsetName);
+}
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x8C03;&#x7528; Java &#x4E2D; java.lang.String &#x7C7B;&#x7684; &#x4E0B;&#x8FF0;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8F6C;&#x5316;&#xFF1A;</p>
+<pre><code class="lang-java">  <span class="hljs-keyword">public</span> java.lang.String(<span class="hljs-keyword">byte</span>[], java.lang.String) <span class="hljs-keyword">throws</span> java.io.UnsupportedEncodingException;
+    descriptor: ([BLjava/lang/String;)V
+</code></pre>
+<h1 id="8-jni-&#x4E2D;&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;">8 JNI &#x4E2D;&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;</h1>
+<p>&#x5728; Java &#x5C42;&#x4E2D;&#x7ED9; Native &#x5C42;&#x4F20;&#x5165; &#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sort_function</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *a, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *b)</span> </span>{
+    <span class="hljs-keyword">return</span>(<span class="hljs-built_in">strcmp</span>(a, b));
+}
+
+<span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    giveIntArray
+* Signature: ([I)V
+*/</span>
+<span class="hljs-function">JNIEXPORT <span class="hljs-keyword">void</span> JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_giveIntArray</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj, jintArray ints)</span> </span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1 function is run...\n&quot;</span>);
+    jint* values = (*jniEnv)-&gt;GetIntArrayElements(jniEnv, ints, JNI_FALSE);
+
+    <span class="hljs-keyword">int</span> length = (*jniEnv)-&gt;GetArrayLength(jniEnv, ints);
+    qsort(values, length, <span class="hljs-keyword">sizeof</span>(jint), sort_function);
+
+    (*jniEnv)-&gt;ReleaseIntArrayElements(jniEnv, ints, values, <span class="hljs-number">0</span>);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;2 function is run...\n&quot;</span>);
+}
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x6392;&#x5E8F;&#x64CD;&#x4F5C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x6807;&#x51C6; C &#x8BED;&#x8A00;&#x5E93;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<code>qsort()</code>&#xFF1B;</li>
+<li>&#x5FC5;&#x987B;&#x6267;&#x884C;&#x4E86; <code>ReleaseIntArrayElements()</code> &#x624D;&#x4F1A;&#x5C06;&#x6392;&#x5E8F;&#x7ED3;&#x679C;&#x56DE;&#x4F20;&#x5230; Java &#x5C42;&#x4E2D;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x540C;&#x6B65;&#xFF09;&#xFF1B;</li>
+<li>&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;<ol>
+<li>0 &#x8868;&#x793A; Java &#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x5E76;&#x4E14;&#x91CA;&#x653E; C/C++ &#x6570;&#x7EC4;&#xFF1B;</li>
+<li>JNI_ABORT Java&#x6570;&#x7EC4;&#x4E0D;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x4F46;&#x91CA;&#x653E; C/C++ &#x6570;&#x7EC4;&#xFF1B;</li>
+<li>JNI_COMMIT Java&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x4E0D;&#x91CA;&#x653E; C/C++ &#xFF08;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#xFF0C;&#x6570;&#x7EC4;&#x8FD8;&#x662F;&#x4F1A;&#x91CA;&#x653E;&#xFF09;&#x3002;</li>
+</ol>
+</li>
+</ul>
+<h1 id="9-jni-&#x5F15;&#x7528;&#x53D8;&#x91CF;">9 JNI &#x5F15;&#x7528;&#x53D8;&#x91CF;</h1>
+<p>JNI &#x4E2D;&#x5F15;&#x7528;&#x53D8;&#x91CF;&#x6709; 2 &#x79CD;&#xFF1A;<strong>&#x5C40;&#x90E8;&#x5F15;&#x7528;</strong> &#x548C; <strong>&#x5168;&#x5C40;&#x5F15;&#x7528;</strong>&#x3002;</p>
+<p>&#x5F15;&#x7528;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#xFF1A;&#x5728; JNI &#x4E2D;&#x544A;&#x77E5;&#x865A;&#x62DF;&#x673A;&#x4F55;&#x65F6;&#x56DE;&#x6536;&#x4E00;&#x4E2A; JNI &#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x5C40;&#x90E8;&#x5F15;&#x7528;&#xFF0C;&#x901A;&#x8FC7;<code>DeleteLocalRef()</code>&#x624B;&#x52A8;&#x91CA;&#x653E;&#x5BF9;&#x8C61;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ol>
+<li>&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684; Java &#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x7528;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x8981;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x7684;&#x8017;&#x65F6;&#x64CD;&#x4F5C;&#xFF1B;</li>
+<li>&#x521B;&#x5EFA;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x5C40;&#x90E8;&#x5F15;&#x7528;&#xFF0C;&#x5360;&#x7528;&#x4E86;&#x592A;&#x591A;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x4E9B;&#x5C40;&#x90E8;&#x5F15;&#x7528;&#x8DDF;&#x540E;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x6CA1;&#x6709;&#x5173;&#x8054;&#x6027;&#x3002;</li>
+</ol>
+<p>&#x5168;&#x5C40;&#x5F15;&#x7528;&#x7684;&#x7279;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x5B9E;&#x73B0;&#x53D8;&#x91CF;&#x5171;&#x4EAB;&#xFF0C;&#x53EF;&#x4EE5;&#x8DE8;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF1B;</li>
+<li>&#x624B;&#x52A8;&#x63A7;&#x5236;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x3002;</li>
+</ol>
+<p>&#x5F31;&#x5168;&#x5C40;&#x5F15;&#x7528;&#x7684;&#x7279;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x8282;&#x7701;&#x5185;&#x5B58;&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x65F6;&#x53EF;&#x4EE5;&#x91CA;&#x653E;&#x6240;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>&#x53EF;&#x4EE5;&#x5F15;&#x7528;&#x4E00;&#x4E2A;&#x4E0D;&#x5E38;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x662F;NULL &#xFF0C;&#x4E34;&#x65F6;&#x518D;&#x53BB;&#x521B;&#x5EFA;&#xFF1B;</li>
+</ol>
+<h1 id="10-&#x5F02;&#x5E38;&#x5904;&#x7406;">10 &#x5F02;&#x5E38;&#x5904;&#x7406;</h1>
+<p>&#x5728; Native &#x65B9;&#x6CD5;&#x4E2D;&#x53D1;&#x751F;&#x4E86;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;Java&#x5C42;&#x8C03;&#x7528;&#x8BE5; native &#x65B9;&#x6CD5;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x540E;&#x7EED;&#x4EE3;&#x7801;&#x4E0D;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB; Throwable catch &#x5230;&#x3002;</p>
+<p>Native &#x5C42;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1; Java &#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF1B;&#x8865;&#x6551;&#x63AA;&#x65BD;&#x4FDD;&#x8BC1; Native &#x4EE3;&#x7801;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    exception
+* Signature: ()V
+*/</span>
+<span class="hljs-function">JNIEXPORT <span class="hljs-keyword">void</span> JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_exception</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj)</span> </span>{
+    jclass cls = (*jniEnv)-&gt;GetObjectClass(jniEnv, jobj);
+    jfieldID fid = (*jniEnv)-&gt;GetFieldID(jniEnv, cls, <span class="hljs-string">&quot;objectField2&quot;</span>, <span class="hljs-string">&quot;Ljava/lang/String;&quot;</span>);
+
+    jthrowable exception = (*jniEnv)-&gt;ExceptionOccurred(jniEnv);
+    <span class="hljs-keyword">if</span> (exception != <span class="hljs-literal">NULL</span>) {
+        <span class="hljs-comment">// &#x8BA9; java &#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#xFF0C;&#x9700;&#x8981;&#x6E05;&#x7A7A;&#x5F02;&#x5E38;&#x4FE1;&#x606F;</span>
+        (*jniEnv)-&gt;ExceptionClear(jniEnv);
+
+        fid = (*jniEnv)-&gt;GetFieldID(jniEnv, cls, <span class="hljs-string">&quot;objectField&quot;</span>, <span class="hljs-string">&quot;Ljava/lang/String;&quot;</span>);
+    }
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5C5E;&#x6027;&#x7684;&#x503C;</span>
+    jstring jstr = (*jniEnv)-&gt;GetObjectField(jniEnv, jobj, fid);
+    <span class="hljs-comment">// jstring --&gt; char*</span>
+    <span class="hljs-keyword">char</span>* str = (*jniEnv)-&gt;GetStringUTFChars(jniEnv, jstr, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-comment">// &#x5BF9;&#x6BD4;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+    <span class="hljs-keyword">if</span> (_stricmp(str, <span class="hljs-string">&quot;changed: XXXX&quot;</span>) != <span class="hljs-number">0</span>) {
+        <span class="hljs-comment">// &#x8BA4;&#x4E3A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x7ED9;Java&#x5C42;&#x5904;&#x7406;</span>
+        jclass newExcCls = (*jniEnv)-&gt;FindClass(jniEnv, <span class="hljs-string">&quot;java/lang/IllegalArgumentException&quot;</span>);
+        (*jniEnv)-&gt;ThrowNew(jniEnv, newExcCls, <span class="hljs-string">&quot;key&apos;s value is invalid!&quot;</span>);
+    }
+}
+</code></pre>
+<p>JNI &#x81EA;&#x5DF1;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x5728; Java &#x5C42;&#x65E0;&#x6CD5;&#x88AB;&#x6355;&#x6349;&#xFF0C;&#x53EA;&#x80FD;&#x5728; Native &#x5C42;&#x6E05;&#x7A7A;&#xFF1B;&#x7528;&#x6237;&#x901A;&#x8FC7; ThrowNew &#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; Java &#x5C42;&#x6355;&#x6349;&#x3002;</p>
+<h1 id="11-jni-&#x7F13;&#x5B58;&#x7B56;&#x7565;">11 JNI &#x7F13;&#x5B58;&#x7B56;&#x7565;</h1>
+<p><strong>&#x5C40;&#x90E8;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x7684;&#x7F13;&#x5B58;&#x7B56;&#x7565;</strong>&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    cached
+* Signature: (I)V
+*/</span>
+<span class="hljs-function">JNIEXPORT <span class="hljs-keyword">void</span> JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_cached</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jobject jobj, jint values)</span> </span>{
+    jclass cls = (*jniEnv)-&gt;GetObjectClass(jniEnv, jobj);
+
+    <span class="hljs-keyword">static</span> jfieldID fid = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">if</span> (fid == <span class="hljs-literal">NULL</span>) {
+        fid = (*jniEnv)-&gt;GetFieldID(jniEnv, cls, <span class="hljs-string">&quot;objectField&quot;</span>, <span class="hljs-string">&quot;Ljava/lang/String;&quot;</span>);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;function is execute: %d\n&quot;</span>, values);
+    }
+}
+</code></pre>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x5C40;&#x90E8;&#x9759;&#x6001;&#x53D8;&#x91CF;<code>fid</code>&#xFF0C;&#x867D;&#x7136;&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x751F;&#x547D;&#x5468;&#x671F;&#x4F1A;&#x662F;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x671F;&#xFF0C;&#x4F46;&#x662F;&#x58F0;&#x660E;&#x5468;&#x671F;&#x53EA;&#x662F;&#x672C;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF1A;&#x4E00;&#x65E6;&#x6267;&#x884C;&#x4E86;&#x590D;&#x5236;&#x64CD;&#x4F5C;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x53CD;&#x590D;&#x6267;&#x884C;&#x591A;&#x6B21;&#xFF0C;&#x5C06;&#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x88AB;&#x8D4B;&#x503C;&#x3002;</p>
+<p>&#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x53D8;&#x91CF;</span>
+jfieldID fieldId;
+jmethodID methodId;
+
+<span class="hljs-comment">/*
+* Class:     com_arthur_ndk_JniTest
+* Method:    initNative
+* Signature: ()V
+*/</span>
+<span class="hljs-function">JNIEXPORT <span class="hljs-keyword">void</span> JNICALL <span class="hljs-title">Java_com_arthur_ndk_JniTest_initNative</span>
+<span class="hljs-params">(JNIEnv *jniEnv, jclass cls)</span> </span>{
+    fieldId = (*jniEnv)-&gt;GetFieldID(jniEnv, cls, <span class="hljs-string">&quot;objectField&quot;</span>, <span class="hljs-string">&quot;Ljava/lang/String;&quot;</span>);
+    methodId = (*jniEnv)-&gt;GetMethodID(jniEnv, cls, <span class="hljs-string">&quot;giveIntArray&quot;</span>, <span class="hljs-string">&quot;([I)V&quot;</span>);
+}
+</code></pre>
+<p>&#x4E00;&#x822C;&#x662F;&#x5728;&#x52A8;&#x6001;&#x5E93;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x7ACB;&#x5373;&#x521D;&#x59CB;&#x5316;&#x5E76;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">static</span> {
+    <span class="hljs-keyword">try</span> {
+        System.loadLibrary(<span class="hljs-string">&quot;CProjectDemo&quot;</span>);
+        initNative();
+    } <span class="hljs-keyword">catch</span> (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}
+</code></pre>
+<h1 id="12-&#x5927;&#x578B;&#x5E94;&#x7528;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#x89E3;&#x51B3;&#x65B9;&#x6848;">12 &#x5927;&#x578B;&#x5E94;&#x7528;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#x89E3;&#x51B3;&#x65B9;&#x6848;</h1>
+<p>&#x6BD4;&#x5982;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x5373;&#x65F6;&#x901A;&#x8BAF;&#x7684; App&#xFF0C;&#x90FD;&#x4F1A;&#x4F7F;&#x7528; C/C++ &#x5B9E;&#x73B0;&#x5E95;&#x5C42;&#x901A;&#x8BAF;&#x7684;&#x5E93;&#x3002;&#x539F;&#x56E0;&#xFF1A;</p>
+<ol>
+<li>&#x4FDD;&#x6301;iPhone&#x3001;Android&#x3001;Windows Phone&#x7B49;&#x6267;&#x884C;&#x5E73;&#x53F0;&#x4E00;&#x81F4;&#x6027;&#xFF08;&#x8DE8;&#x5E73;&#x53F0;&#xFF09;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x5F00;&#x53D1;&#xFF1B;</li>
+<li>&#x5FEB;&#x901F;&#xFF0C;&#x589E;&#x52A0;&#x53CD;&#x7F16;&#x8BD1;&#x7684;&#x96BE;&#x5EA6;&#x3002;</li>
+</ol>
+<h1 id="13-&#x589E;&#x91CF;&#x66F4;&#x65B0;">13 &#x589E;&#x91CF;&#x66F4;&#x65B0;</h1>
+<blockquote>
+<p>&#x9759;&#x9ED8;&#x5B89;&#x88C5;&#x9700;&#x8981; root &#x6743;&#x9650;&#xFF1B;</p>
+<p><strong>&#x63D2;&#x4EF6;&#x5F0F;&#x5F00;&#x53D1;</strong>&#xFF08;&#x5F80;&#x5BBF;&#x4E3B;&#x7A0B;&#x5E8F;&#x91CC;&#x9762;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF1B;&#x5982;&#x679C;&#x5BBF;&#x4E3B;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x66F4;&#x65B0;&#xFF0C;&#x53EA;&#x80FD;&#x91C7;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#xFF09;&#x3001;<strong>&#x70ED;&#x4FEE;&#x590D;</strong>&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0; App &#x7684;&#x66F4;&#x65B0;&#x3002;</p>
+<p><strong>&#x589E;&#x91CF;&#x66F4;&#x65B0;</strong>&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x89E3;&#x51B3;&#xFF1A;&#x5BBF;&#x4E3B;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+</blockquote>
+<p>&#x589E;&#x91CF;&#x66F4;&#x65B0;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li><p>&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x6839;&#x636E; App &#x7684;&#x4E0D;&#x540C;&#x7248;&#x672C;<strong>&#x751F;&#x6210;&#x4E0D;&#x540C;&#x7684; .patch &#x5DEE;&#x5206;&#x5305;&#x6587;&#x4EF6;</strong>&#xFF08;&#x53EF;&#x4EE5;&#x8282;&#x7701;&#x7528;&#x6237;&#x6D41;&#x91CF;&#xFF09;&#xFF1B;</p>
+<blockquote>
+<p>&#x4E00;&#x65E6;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4E0A;&#x4F20;&#x4E86;&#x65B0;&#x7248;&#x672C;&#x7684; Apk&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7ACB;&#x5373;&#x4F1A;&#x751F;&#x6210;&#x5DEE;&#x5206;&#x5305;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>App &#x5BA2;&#x6237;&#x7AEF;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7248;&#x672C;<strong>&#x4E0B;&#x8F7D;</strong> .patch &#x5DEE;&#x5206;&#x5305;&#x6587;&#x4EF6;&#xFF1B;</p>
+</li>
+<li><p>App &#x5BA2;&#x6237;&#x7AEF;<strong>&#x5408;&#x6210;</strong>&#x65B0;&#x7248;&#x672C; App &#x5B89;&#x88C5;&#x6587;&#x4EF6;&#xFF1B;</p>
+</li>
+<li><p>&#x6267;&#x884C; App <strong>&#x5B89;&#x88C5;</strong>&#x3002;</p>
+</li>
+</ol>
+<blockquote>
+<p>&#x96BE;&#x70B9;&#xFF1A;&#x4E0D;&#x540C;&#x5E02;&#x573A;&#x6E20;&#x9053;&#xFF0C;&#x4E0D;&#x540C;&#x7248;&#x672C; App &#x589E;&#x91CF;&#x66F4;&#x65B0;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x5DEE;&#x5206;&#x5305;&#x6587;&#x4EF6;&#x3002;&#x670D;&#x52A1;&#x5668;&#x96BE;&#x5EA6;&#x4F1A;&#x6BD4;&#x5BA2;&#x6237;&#x7AEF;&#x5927;&#xFF01;</p>
+</blockquote>
+<h2 id="131-&#x670D;&#x52A1;&#x5668;&#x7AEF;">13.1 &#x670D;&#x52A1;&#x5668;&#x7AEF;</h2>
+<p>binary diff / patch utility &#x540C;&#x65F6;&#x5F15;&#x7528;&#x4E86; bzip&#xFF0C;&#x5176;&#x4E2D;&#x524D;&#x8005;&#x7528;&#x4E8E;&#x505A;&#x5DEE;&#x5206;&#xFF0C;&#x540E;&#x8005;&#x7528;&#x4E8E;&#x505A;&#x5408;&#x5E76;&#x3002;</p>
+<blockquote>
+<p>&#x4E0A;&#x8FF0;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;&#x4E0D;&#x4EC5;&#x6709; Windows &#x73AF;&#x5883;&#x4E0B;&#x7684;&#x7F16;&#x8BD1;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x4E5F;&#x6709; Linux &#x4E0B;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x5F00;&#x53D1;&#x7684;&#x73AF;&#x5883;&#x5982;&#x679C;&#x662F; Windows&#xFF0C;&#x90E8;&#x7F72;&#x73AF;&#x5883;&#x662F; Linux&#xFF0C;&#x9700;&#x8981;&#x4E0A;&#x8FF0;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x6B64;&#x751F;&#x6210; .dll &#x548C; .so &#x52A8;&#x6001;&#x5E93;&#x3002;</p>
+<p>&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x5728; Visual Studio &#x4E2D;&#x65B0;&#x5EFA;&#x9879;&#x76EE;&#xFF0C;&#x7F16;&#x8BD1; bsDiff &#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x751F;&#x6210; .dll &#x52A8;&#x6001;&#x5E93;&#xFF0C;&#x7528;&#x4E8E;&#x5F97;&#x5230;&#x5DEE;&#x5206;&#x5305;&#x6587;&#x4EF6;&#xFF1B;<ul>
+<li>&#x95EE;&#x9898;1&#xFF1A;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x51FD;&#x6570;&#xFF1B;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5DE5;&#x7A0B;&#x5C5E;&#x6027; --&gt; C/C++ &#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x589E;&#x52A0; <code>-D _CRT_SECURE_NO_WARNINGS</code>&#xFF1B;</li>
+<li>&#x95EE;&#x9898;2&#xFF1A;&#x4F7F;&#x7528;&#x4E86;&#x8FC7;&#x65F6;&#x7684;&#x51FD;&#x6570;&#xFF1B;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5728;&#x4E0A;&#x8FF0;&#x540C;&#x6837;&#x5730;&#x65B9;&#x589E;&#x52A0; <code>-D _CRT_NONSTDC_NO_DEPRECATE</code>&#xFF1B;</li>
+<li>&#x95EE;&#x9898;3&#xFF1A;&#x53D8;&#x91CF;&#x672A;&#x4F5C;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#xFF08;&#x53EF;&#x80FD;&#x7684;&#x539F;&#x56E0;&#x662F;&#x4F7F;&#x7528;MAC&#x7535;&#x8111;&#x5F00;&#x53D1;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4E0D;&#x505A;&#x4E25;&#x683C;&#x7684;&#x8BED;&#x6CD5;&#x68C0;&#x67E5;&#xFF09;&#xFF1B;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5DE5;&#x7A0B;&#x5C5E;&#x6027; --&gt; C/C++ &#x5E38;&#x89C4;&#xFF0C;&#x8BBE;&#x7F6E; SDL &#x68C0;&#x67E5;&#x4E3A;&#x5426;&#x3002;</li>
+</ul>
+</li>
+<li>&#x4FEE;&#x6539; bsdiff.cpp &#x6E90;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#xFF0C;&#x7F16;&#x5199; Java &#x5C42; native &#x4EE3;&#x7801;&#xFF0C;&#x751F;&#x6210;&#x5934;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x5199; JNI &#x51FD;&#x6570;&#xFF0C;&#x4F9B; Java&#x5C42;&#x8C03;&#x7528;&#xFF1B;</li>
+</ol>
+<blockquote>
+<p>Mac OS &#x6216;&#x8005;&#x662F; Linux &#x7CFB;&#x7EDF;&#x7684;&#x9ED8;&#x8BA4;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;UTF-8 &#x65E0; BOM &#x683C;&#x5F0F;&#x7F16;&#x7801;&#x3002;&#x6CE8;&#x610F;&#x7EDF;&#x4E00;&#x7F16;&#x7801;&#xFF01;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: 201902W1">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Flask的线程隔离-yu.html" class="navigation navigation-next " aria-label="Next page: Flask的线程隔离-yu.md">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Android下的JNI使用-张大Ant.md","level":"4.1.4.1","depth":3,"next":{"title":"Flask的线程隔离-yu.md","level":"4.1.4.2","depth":3,"path":"Tip/201902W1/Flask的线程隔离-yu.md","ref":"./Tip/201902W1/Flask的线程隔离-yu.md","articles":[]},"previous":{"title":"201902W1","level":"4.1.4","depth":2,"path":"README.md","ref":"./README.md","articles":[{"title":"Android下的JNI使用-张大Ant.md","level":"4.1.4.1","depth":3,"path":"Tip/201902W1/Android下的JNI使用-张大Ant.md","ref":"./Tip/201902W1/Android下的JNI使用-张大Ant.md","articles":[]},{"title":"Flask的线程隔离-yu.md","level":"4.1.4.2","depth":3,"path":"Tip/201902W1/Flask的线程隔离-yu.md","ref":"./Tip/201902W1/Flask的线程隔离-yu.md","articles":[]},{"title":"GitHub团队协作git流程-yanglei094121.md","level":"4.1.4.3","depth":3,"path":"Tip/201902W1/GitHub团队协作git流程-yanglei094121.md","ref":"./Tip/201902W1/GitHub团队协作git流程-yanglei094121.md","articles":[]},{"title":"Guava为什么被取代-寒食君.md","level":"4.1.4.4","depth":3,"path":"Tip/201902W1/Guava为什么被取代-寒食君.md","ref":"./Tip/201902W1/Guava为什么被取代-寒食君.md","articles":[]},{"title":"RabbitMQ4-Routing-Leo.md","level":"4.1.4.5","depth":3,"path":"Tip/201902W1/RabbitMQ4-Routing-Leo.md","ref":"./Tip/201902W1/RabbitMQ4-Routing-Leo.md","articles":[]},{"title":"Solr的那些事-torreyxian.md","level":"4.1.4.6","depth":3,"path":"Tip/201902W1/Solr的那些事-torreyxian.md","ref":"./Tip/201902W1/Solr的那些事-torreyxian.md","articles":[]},{"title":"Windows工具软件-落英坠露.md","level":"4.1.4.7","depth":3,"path":"Tip/201902W1/Windows工具软件-落英坠露.md","ref":"./Tip/201902W1/Windows工具软件-落英坠露.md","articles":[]},{"title":"Windows索引工具Wox-YuanCome.md","level":"4.1.4.8","depth":3,"path":"Tip/201902W1/Windows索引工具Wox-YuanCome.md","ref":"./Tip/201902W1/Windows索引工具Wox-YuanCome.md","articles":[]},{"title":"集合遍历方式的选择-启航.md","level":"4.1.4.9","depth":3,"path":"Tip/201902W1/集合遍历方式的选择-启航.md","ref":"./Tip/201902W1/集合遍历方式的选择-启航.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","expandable-chapters-small","livereload"],"pluginsConfig":{"expandable-chapters-small":{},"fontsettings":{"family":"sans","size":2,"theme":"white"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Tip/201902W1/Android下的JNI使用-张大Ant.md","mtime":"2019-02-25T05:53:05.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T07:09:35.320Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
