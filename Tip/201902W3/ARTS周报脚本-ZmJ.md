@@ -16,11 +16,6 @@ python script.py 201902W3  # 指定周
 import os
 import sys
 
-"""
-usage(python3):
-
-python script.py 201902W3
-"""
 
 folders = ['Algorithm', 'Review', 'Share', 'Tip']
 
