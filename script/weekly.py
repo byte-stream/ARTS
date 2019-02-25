@@ -113,6 +113,8 @@ def check_filename():
         for d in dirs:
             files = os.listdir(folder + '/' + d)
             for file in files:
+                if ' ' in file:
+                    raise Exception('文件名中请用(-)替换空格 {}/{}/{}'.format(folder, d, file))
                 if not re.match(r'.*-(.*)\.md', file):
                     raise Exception('文件名不规范 {}/{}/{}'.format(folder, d, file))
     return 'success'

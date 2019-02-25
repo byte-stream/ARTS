@@ -32,7 +32,7 @@
 
 - [T-ARTS周报脚本](../Tip/201902W3/ARTS周报脚本-ZmJ.md)
 
-- [S-修改Git Commit Message](../Share/201902W3/修改git%20commit%20message-ZmJ.md)
+- [S-修改Git Commit Message](../Share/201902W3/修改git-commit-message-ZmJ.md)
 
 ### 201902W4:
 
