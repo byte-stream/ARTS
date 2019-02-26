@@ -11,7 +11,11 @@ git co -b gh-pages
 # book.json
 cat>book.json<<EOF
 {
-    "plugins": ["expandable-chapters-small"]
+    "plugins": [
+        "expandable-chapters-small",
+        "search",
+        "splitter"
+        ]
 }
 EOF
 
