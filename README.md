@@ -1,5 +1,7 @@
 ![](https://images.unsplash.com/photo-1547156979-b57c6439f9d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)
 
+[![Build Status](https://travis-ci.org/byte-stream/ARTS.svg?branch=master)](https://travis-ci.org/byte-stream/ARTS)
+
 # ARTS
 
 ARTS来自于左耳朵耗子（陈皓）提出的一个观点：每周通过这四个指标来训练自己：
@@ -30,8 +32,11 @@ Share：分享一个观点或思考
 
 ## 汇总
 
-[第一周](/Weekly/201901W4.md)
-[第二周](/Weekly/201902W1.md)
+[第1周](/Weekly/201901W4.md)
+[第2周](/Weekly/201902W1.md)
+[第3周](/Weekly/201902W2.md)
+[第4周](/Weekly/201902W3.md)
+[第5周](/Weekly/201902W4.md)
 
 
 ## 联系

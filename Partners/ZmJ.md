@@ -27,8 +27,19 @@
 ### 201902W3:
 
 - [A-leetcode121,122](../Algorithm/201902W3/201902W3-ZmJ.md)
+
 - [R-软件工程与编程的不同](../Review/201902W3/软件工程与编程的不同-ZmJ.md)
 
 - [T-ARTS周报脚本](../Tip/201902W3/ARTS周报脚本-ZmJ.md)
 
-- [S-修改Git Commit Message](../Share/201902W3/修改git%20commit%20message-ZmJ.md)
+- [S-修改Git Commit Message](../Share/201902W3/修改git-commit-message-ZmJ.md)
+
+### 201902W4:
+
+- [A-leetcode168](../Algorithm/201902W4/201902W4-ZmJ.md)
+
+- [R-Java-for-Python-Programmers](../Review/201902W4/Java-for-Python-Programmers-ZmJ.md)
+
+- [T-travis.ci持续集成工具](../Tip/201902W4/travis.ci持续集成工具-ZmJ.md)
+
+- [S-vim的一些插件和配置](../Share/201902W4/vim的一些插件和配置-ZmJ.md)

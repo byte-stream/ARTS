@@ -7,7 +7,7 @@ branches:
         - master
         - script
 script:
-    python ./script.py
+    python ./script/weekly.py
 
 notifications:
     email: false
