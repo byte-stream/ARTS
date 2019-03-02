@@ -1,6 +1,6 @@
 ## Android 开发者指南之性能提示
 
-翻译自 Android 开发者训练课程，原文链接：[Performance tips](https://developer.android.com/training/articles/perf-tips)
+翻译自 Android 开发者训练课程，原文链接：[Performance tips](https://developer.android.com/training/articles/perf-tips)。
 
 ----
 
