@@ -14,8 +14,14 @@ cat>book.json<<EOF
     "plugins": [
         "expandable-chapters-small",
         "search",
-        "splitter"
-        ]
+        "splitter",
+        "disqus"
+        ],
+    "pluginsConfig":{
+        "disqus":{
+            "shortName": "https-www-wzmmmmj-com-arts"
+        }
+    }
 }
 EOF
 
