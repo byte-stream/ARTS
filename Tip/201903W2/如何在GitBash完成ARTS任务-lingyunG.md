@@ -12,3 +12,5 @@
 3）git pull“上游路径”
 4）git status： 这一步可以查看更改了哪些文件
 5）git add ./
+6) git commit
+7) git push "自己的git项目路径"
