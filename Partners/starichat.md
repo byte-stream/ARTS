@@ -17,3 +17,9 @@
 
 
 
+### 201903W4:
+
+- [A: 红黑树](../Algorithm/201903W4/201903W4-starichat.md)
+- [R: 读后感：黑客与画家](../Review/201903W4/《黑客与画家》读后感-starichat.md)
+- [T: Git新手使用技巧](../Tip/201903W4/Git新手技巧-starichat.md)
+- [S: 哈希算法的应用需](../Share/201903W4/哈希算法的应用续-starichat.md)
