@@ -11,10 +11,10 @@ def generate_catalogue():
     text = '# Summary\n\n* [简介](README.md)\n'
     for folder in FOLDERS:
         text += '\n\n* [{}](./README.md)\n'.format(folder)
-        dirs = sorted(os.listdir(folder + '/'))[::-1]
+        dirs = sorted(os.listdir("../" + folder + '/'))[::-1]
         for d in dirs:
             text += '    * [{}](./README.md)\n'.format(d)
-            files = sorted(os.listdir(folder + '/' + d))
+            files = sorted(os.listdir("../" + folder + '/' + d))
             for file in files:
                 text += '        * [{}](./{}/{}/{})\n'.format(file, folder, d, file.replace(' ', '%20'))
         text += '\n---'

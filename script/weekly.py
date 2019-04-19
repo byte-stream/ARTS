@@ -109,9 +109,9 @@ def main(week: str):
 
 def check_filename():
     for folder in folders:
-        dirs = os.listdir(folder + '/')
+        dirs = os.listdir('../' + folder + '/')
         for d in dirs:
-            files = os.listdir(folder + '/' + d)
+            files = os.listdir('../' + folder + '/' + d)
             for file in files:
                 if ' ' in file:
                     raise Exception('文件名中请用(-)替换空格 {}/{}/{}'.format(folder, d, file))
