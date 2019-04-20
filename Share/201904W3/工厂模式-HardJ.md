@@ -377,11 +377,7 @@ public class Customer {
 ​	如上测试代码，现在顾客不需要关注到底哪个城市的奶茶分店可以获取到草莓奶茶，只要是一个店并且能得到该产品就行，通过milkTeaStore.getStrawberryMilkTea();会返回所在区域的草莓奶茶。如果各个地方除了原料不同外对应其他步骤也不同，就可以覆盖同一奶茶接口的模板实现。
 
 抽象工厂中的开闭原则
-<<<<<<< HEAD
-<img src="https://artsmd.oss-cn-hangzhou.aliyuncs.com/arts/2.png" style="width:200px height:500px" />
-=======
 ![image](https://artsmd.oss-cn-hangzhou.aliyuncs.com/arts/2.png)
->>>>>>> 94f3ff3580c00c30f1c3f02b51c5fd9486a99a1a
 
 ​	根据上图，对于增加产品族(各个地方的分店)来说，抽象工厂很好的支持了开闭原则，仅需要提供三个接口实现（玫瑰奶茶、草莓奶茶、奶茶店）就可以增加对应产品族（对应分店）。但如果有个需求（推出新品香芋奶茶/玫瑰奶茶下架）是想改产品族中的某个产品，这时就必须修改所有工厂的实现了，并且新增产品接口。所以，抽象工厂从某种程度上来说是支持开闭原则的，但从另一个程度来说并不支持。
 
