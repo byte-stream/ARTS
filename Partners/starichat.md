@@ -1,4 +1,4 @@
-# Partner: 
+﻿# Partner: 
 
 [@starichat](https://github.com/starichat)
 
@@ -22,4 +22,11 @@
 - [A: 红黑树](../Algorithm/201903W4/201903W4-starichat.md)
 - [R: 读后感：黑客与画家](../Review/201903W4/《黑客与画家》读后感-starichat.md)
 - [T: Git新手使用技巧](../Tip/201903W4/Git新手技巧-starichat.md)
-- [S: 哈希算法的应用需](../Share/201903W4/哈希算法的应用续-starichat.md)
+- [S: 哈希算法的应用续](../Share/201903W4/哈希算法的应用续-starichat.md)
+
+### 201904W3:
+
+- [A: Reverse LinkedList](../Algorithm/201904W3/201904W3-starichat.md)
+- [R: 线程的基础知识](../Review/201904W3/线程的基础知识-starichat.md)
+- [T: 懒加载方式的使用](../Tip/201904W3/懒加载方式的使用-starichat.md)
+- [S: Java对日期的操作](../Share/201904W3/Java对日期的操作-starichat.md)
