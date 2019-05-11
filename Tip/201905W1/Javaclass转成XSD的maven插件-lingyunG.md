@@ -1,0 +1,1 @@
+jaxb2-maven-plugin
